@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-950 text-gray-400">
+    <footer className="bg-primary-950/80 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="Logo" className="h-12" />
+              <img src="/logo.png" alt="Logo" className="h-30" />
             </div>
             <p className="mb-6 leading-relaxed">
               Your trusted partner in luxury real estate. We specialize in exceptional properties for discerning clients.
