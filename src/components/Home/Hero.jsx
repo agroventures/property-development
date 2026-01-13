@@ -1,11 +1,12 @@
 import { LocateIcon, Search } from 'lucide-react';
 import React, { useState } from 'react'
+import { stats } from '../../data/content';
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState('buy');
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center"> {/* 1. Added justify-center */}
+    <section className="relative min-h-screen flex items-center justify-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
@@ -19,8 +20,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col items-center text-center"> {/* 2. Added flex-col, items-center, and text-center */}
-        <div className="max-w-4xl flex flex-col items-center"> {/* 3. Increased max-width and forced centering */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col items-center text-center">
+        <div className="max-w-4xl flex flex-col items-center">
           
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary-500/20 border border-primary-500/30 rounded-full mb-8 backdrop-blur-sm">
@@ -35,13 +36,13 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed"> {/* 4. Adjusted max-width for balance */}
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
             Experience luxury living with our curated collection of exceptional properties. 
             From elegant penthouses to serene countryside estates.
           </p>
 
           {/* Search Box */}
-          <div className="bg-white rounded-3xl p-3 shadow-2xl w-full max-w-2xl text-left"> {/* 5. text-left keeps the input labels aligned properly inside the centered box */}
+          <div className="bg-white rounded-3xl p-3 shadow-2xl w-full max-w-2xl text-left">
             {/* Tabs */}
             <div className="flex space-x-1 mb-4 p-1 bg-gray-100 rounded-2xl">
               {['buy', 'rent', 'sell'].map((tab) => (
@@ -84,12 +85,8 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-12 mt-16 w-full"> {/* 6. Added justify-center here */}
-            {[
-              { value: '500+', label: 'Luxury Properties' },
-              { value: '50+', label: 'Expert Agents' },
-              { value: '10K+', label: 'Happy Clients' },
-            ].map((stat, index) => (
+          <div className="flex flex-wrap justify-center gap-12 mt-16 w-full">
+            {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-gradient">{stat.value}</div>
                 <div className="text-gray-400 mt-1">{stat.label}</div>
