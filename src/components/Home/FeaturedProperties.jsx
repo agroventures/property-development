@@ -80,25 +80,31 @@ const FeaturedProperties = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
           <div>
-            <span className="text-blue-600 font-semibold">Our Properties</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-              Featured Listings
+            <span className="inline-flex items-center space-x-2 text-primary-600 font-semibold">
+              <span className="w-12 h-0.5 bg-primary-500"></span>
+              <span>Featured Listings</span>
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-950 mt-4">
+              Discover Exceptional
+              <span className="block text-primary-600">Properties</span>
             </h2>
-            <p className="text-gray-600 mt-4 max-w-xl">
-              Discover our hand-picked selection of premium properties that offer exceptional value and lifestyle.
+            <p className="text-gray-600 mt-4 max-w-xl text-lg">
+              Hand-picked luxury properties that offer exceptional value, stunning design, and premium locations.
             </p>
           </div>
           <a
             href="#"
-            className="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 mt-4 md:mt-0"
+            className="inline-flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 mt-6 lg:mt-0 group"
           >
             <span>View All Properties</span>
-            <ArrowRight />
+            <span className="group-hover:translate-x-1 transition-transform">
+              <ArrowRight />
+            </span>
           </a>
         </div>
 

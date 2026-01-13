@@ -6,7 +6,7 @@ import FeaturedProperties from '../components/Home/FeaturedProperties'
 import PropertyCategories from '../components/Home/PropertyCategories'
 import Testimonials from '../components/Home/Testimonials'
 import CTA from '../components/Home/CTA'
-import Features from '../components/Home/Features'
+import Newsletter from '../components/Home/Newsletter'
 
 function Home() {
   return (
@@ -15,9 +15,9 @@ function Home() {
       <Hero />
       <FeaturedProperties />
       <PropertyCategories />
-      <Features />
       <Testimonials />
       <CTA />
+      <Newsletter />
       <Footer />
     </div>
   )
