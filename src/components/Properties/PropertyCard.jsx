@@ -1,4 +1,3 @@
-// components/Properties/PropertyCard.jsx
 import React, { useState } from 'react'
 import { 
     Heart, 

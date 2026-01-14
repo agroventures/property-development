@@ -1,4 +1,3 @@
-// components/Properties/PropertyFilters.jsx
 import React, { useState } from 'react'
 import { 
     SlidersHorizontal, 

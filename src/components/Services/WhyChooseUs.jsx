@@ -1,4 +1,3 @@
-// components/Services/WhyChooseUs.jsx
 import React from 'react'
 import { Shield, Award, Clock, Users, Zap, HeartHandshake } from 'lucide-react'
 

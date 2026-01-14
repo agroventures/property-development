@@ -1,4 +1,3 @@
-// components/Services/ServicesList.jsx
 import React from 'react'
 import { 
   Home, 

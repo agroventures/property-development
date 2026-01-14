@@ -76,7 +76,16 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-primary-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">&copy; 2024 Elite Estates. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Agro Ventures Property Development. All rights reserved. Developed by{" "}
+            <a
+              href="https://ventrax.lk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary-500 hover:text-primary-400 
+                           underline underline-offset-4 transition-colors"
+            >
+              Ventrax.lk
+            </a></p>
           <div className="flex space-x-8 mt-4 md:mt-0 text-sm">
             <a href="#" className="hover:text-primary-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-400 transition-colors">Terms of Service</a>

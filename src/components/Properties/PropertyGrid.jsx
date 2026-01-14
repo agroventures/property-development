@@ -1,4 +1,3 @@
-// components/Properties/PropertyGrid.jsx
 import React, { useState } from 'react'
 import PropertyCard from './PropertyCard'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
