@@ -3,21 +3,25 @@ import Header from '../components/common/Header'
 import Footer from '../components/common/Footer'
 import HomeHero from '../components/Home/HomeHero'
 import FeaturedProperties from '../components/Home/FeaturedProperties'
-import PropertyCategories from '../components/Home/PropertyCategories'
-import Testimonials from '../components/Home/Testimonials'
-import Newsletter from '../components/Home/Newsletter'
-import HomeCTA from '../components/Home/HomeCTA'
+import CTA from '../components/common/CTA'
+import OurEssence from '../components/Home/OurEssence'
+import HomeAbout from '../components/Home/HomeAbout'
+import DefineUs from '../components/Home/DefineUs'
+import WhyChooseUs from '../components/common/WhyChooseUs'
+import OurPromise from '../components/Home/OurPromise'
 
 function Home() {
   return (
     <div className="min-h-screen">
       <Header />
       <HomeHero />
+      <HomeAbout />
+      <OurEssence />
+      <DefineUs />
       <FeaturedProperties />
-      <PropertyCategories />
-      <Testimonials />
-      <HomeCTA />
-      <Newsletter />
+      <WhyChooseUs />
+      <OurPromise />
+      <CTA />
       <Footer />
     </div>
   )

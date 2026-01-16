@@ -1,75 +1,90 @@
-import { Bath, Bed, Heart, Route, LocateIcon } from 'lucide-react';
-import React, { useState } from 'react'
-
-const PropertyCard = ({ property }) => {
-    const [liked, setLiked] = useState(false);
-
-    return (
-        <div className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-      {/* Image */}
-      <div className="relative overflow-hidden">
-        <img
-          src={property.image}
-          alt={property.title}
-          className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-primary-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        {/* Tags */}
-        <div className="absolute top-4 left-4 flex gap-2">
-          <span className="px-4 py-1.5 bg-primary-500 text-white text-sm font-medium rounded-full shadow-gold">
-            {property.status}
-          </span>
-          {property.featured && (
-            <span className="px-4 py-1.5 bg-primary-950 text-primary-300 text-sm font-medium rounded-full">
-              Featured
-            </span>
-          )}
+const PropertyCard = ({ project }) => {
+  return (
+    <div
+      className="group bg-white rounded-3xl overflow-hidden shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2"
+    >
+      {/* Image Placeholder */}
+      <div className="relative h-64 bg-linear-to-br from-ivory-200 via-ivory-100 to-gold-100 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-24 h-24 border-2 border-gold-500/30 rounded-full flex items-center justify-center">
+            <svg
+              className="w-12 h-12 text-gold-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
         </div>
-        
-        {/* Price */}
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-          <span className="text-3xl font-bold text-white drop-shadow-lg">
-            ${property.price.toLocaleString()}
-            {property.status === 'For Rent' && <span className="text-lg font-normal">/mo</span>}
+        {/* Status Badge */}
+        <div className="absolute top-4 left-4">
+          <span className="bg-gold-500 text-black-900 px-4 py-1.5 rounded-full text-sm font-semibold">
+            {project.status}
+          </span>
+        </div>
+        {/* Tag */}
+        <div className="absolute top-4 right-4">
+          <span className="bg-black-900/80 text-ivory-200 px-4 py-1.5 rounded-full text-sm">
+            {project.tag}
           </span>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-primary-950 mb-2 group-hover:text-primary-600 transition-colors">
-          {property.title}
+      <div className="p-8">
+        <div className="flex items-center gap-2 text-gold-600 text-sm mb-2">
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          {project.location}
+        </div>
+        <h3 className="font-display text-2xl font-bold text-text-primary mb-3 group-hover:text-gold-600 transition-colors">
+          {project.title}
         </h3>
-        <div className="flex items-center text-gray-500 mb-4">
-          <LocateIcon />
-          <span className="ml-2">{property.location}</span>
-        </div>
-
-        {/* Features */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <div className="flex items-center space-x-1 text-gray-600">
-            <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-              <Bed />
-            </div>
-            <span className="text-sm font-medium">{property.beds} Beds</span>
-          </div>
-          <div className="flex items-center space-x-1 text-gray-600">
-            <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-              <Bath />
-            </div>
-            <span className="text-sm font-medium">{property.baths} Baths</span>
-          </div>
-          <div className="flex items-center space-x-1 text-gray-600">
-            <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-              <Route />
-            </div>
-            <span className="text-sm font-medium">{property.area} sqft</span>
-          </div>
-        </div>
+        <p className="text-text-secondary leading-relaxed mb-6">
+          {project.description}
+        </p>
+        <button className="flex items-center gap-2 text-gold-600 font-semibold group/btn">
+          View Project
+          <svg
+            className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </button>
       </div>
     </div>
-    );
+  );
 };
 
 export default PropertyCard

@@ -1,61 +1,58 @@
 import { ArrowRight, Linkedin, Mail, Twitter } from 'lucide-react';
 import React from 'react'
+import { team } from '../../data/content';
+import SectionTitle from '../common/SectionTitle';
 
 const TeamSection = () => {
-  const team = [
-    {
-      name: 'Jonathan Sterling',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80',
-      bio: '20+ years in luxury real estate',
-    },
-    {
-      name: 'Victoria Hayes',
-      role: 'Chief Operating Officer',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80',
-      bio: 'Former VP at Christie\'s Real Estate',
-    },
-    {
-      name: 'Marcus Chen',
-      role: 'Director of Sales',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      bio: '$1B+ in career sales',
-    },
-    {
-      name: 'Isabella Rodriguez',
-      role: 'Head of Marketing',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=761&q=80',
-      bio: 'Award-winning marketing strategist',
-    },
-    {
-      name: 'David Thompson',
-      role: 'Senior Property Advisor',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80',
-      bio: 'Specializes in waterfront properties',
-    },
-    {
-      name: 'Sarah Mitchell',
-      role: 'Client Relations Manager',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-      bio: '15+ years client experience',
-    },
-  ];
-
   return (
     <section className="py-24 bg-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center justify-center space-x-2 text-primary-600 font-semibold">
-            <span className="w-12 h-0.5 bg-primary-500"></span>
-            <span>Meet The Team</span>
-            <span className="w-12 h-0.5 bg-primary-500"></span>
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-950 mt-4">
+          <SectionTitle title="Our Leadership" />
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mt-4">
             Leadership That Inspires
           </h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
-            Our experienced team brings together decades of expertise in luxury real estate.
-          </p>
+        </div>
+
+        {/* --- CEO Message Section --- */}
+        <div className="mb-24 bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row items-center">
+          <div className="w-full md:w-2/5">
+            <img
+              src="/images/team/ceo.JPG"
+              alt="Nilanga Karunarathne"
+              className="h-full object-cover"
+            />
+          </div>
+          <div className="w-full md:w-3/5 p-8 md:p-12 lg:p-16">
+            <div className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
+              A Message from our CEO
+            </div>
+            <blockquote className="text-md md:text-lg font-serif italic text-primary-950 mb-8 leading-relaxed">
+              “Every great journey begins with a single step. When we began this journey, it started with
+              soil in our hands and a vision rooted deep in the earth. Our business was born from the land
+              — through plantations that nurtured both crops and respect for nature. Over the years, we
+              learned that true growth is sustainable, responsible, and deeply connected to the
+              environment.
+              Today, as we take our vision beyond plantations into property development, our purpose
+              remains the same — to create communities that live in harmony with nature.
+              We are not just building homes or structures; we are creating legacies that connect people,
+              the environment, and the future. Through every land sale, every home, and every ecotourism project, we strive to shape a greener, more prosperous tomorrow.
+              True success, I believe, comes when we serve with integrity and innovation while respecting
+              our planet. Together, we are not just developing land — we are cultivating a sustainable
+              future for generations to come.”
+            </blockquote>
+            <div>
+              <h4 className="text-xl font-bold text-primary-950">Nilanga Karunarathne</h4>
+              <p className="text-primary-600 font-medium">Founder & Chief Executive Officer</p>
+            </div>
+          </div>
+        </div>
+
+        {/* --- Team Grid --- */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-primary-950">Our Team</h3>
+          <p className="text-gray-600 mt-2">The experts driving our vision forward every day.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -72,17 +69,17 @@ const TeamSection = () => {
                   className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Social Links */}
                 <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                   <a href="#" className="w-10 h-10 bg-white/90 hover:bg-primary-500 rounded-full flex items-center justify-center text-primary-950 hover:text-white transition-colors">
-                    <Linkedin />
+                    <Linkedin size={20} />
                   </a>
                   <a href="#" className="w-10 h-10 bg-white/90 hover:bg-primary-500 rounded-full flex items-center justify-center text-primary-950 hover:text-white transition-colors">
-                    <Twitter />
+                    <Twitter size={20} />
                   </a>
                   <a href="#" className="w-10 h-10 bg-white/90 hover:bg-primary-500 rounded-full flex items-center justify-center text-primary-950 hover:text-white transition-colors">
-                    <Mail />
+                    <Mail size={20} />
                   </a>
                 </div>
               </div>
@@ -95,20 +92,6 @@ const TeamSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Join Team CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-4">Want to join our team of experts?</p>
-          <a
-            href="#"
-            className="inline-flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 group"
-          >
-            <span>View Career Opportunities</span>
-            <span className="group-hover:translate-x-1 transition-transform">
-              <ArrowRight />
-            </span>
-          </a>
         </div>
       </div>
     </section>

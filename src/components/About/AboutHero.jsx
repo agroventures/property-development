@@ -10,8 +10,8 @@ const AboutHero = () => {
             imgAlt="Modern Architecture"
             badgeText="Established Since 2008"
             title="Redefining Luxury Living"
-            highlightedText="Elite Estates"
-            description="For over 15 years, Elite Estates has been the trusted name in premium real estate, connecting discerning clients with exceptional properties worldwide."
+            highlightedText="AV Properties"
+            description="For over 15 years, AV Properties has been the trusted name in premium real estate, connecting discerning clients with exceptional properties worldwide."
         />
     );
 };

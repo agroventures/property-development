@@ -1,47 +1,53 @@
-import React from 'react'
-import PropertyCard from './PropertyCard';
-import { ArrowRight } from 'lucide-react';
 import { properties } from '../../data/properties';
+import SectionTitle from '../common/SectionTitle';
+import PropertyCard from './PropertyCard';
 
 const FeaturedProperties = () => {
   return (
-    <section className="py-24 bg-primary-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
-          <div>
-            <span className="inline-flex items-center space-x-2 text-primary-600 font-semibold">
-              <span className="w-12 h-0.5 bg-primary-500"></span>
-              <span>Featured Listings</span>
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-950 mt-4">
-              Discover Exceptional
-              <span className="block text-primary-600">Properties</span>
-            </h2>
-            <p className="text-gray-600 mt-4 max-w-xl text-lg">
-              Hand-picked luxury properties that offer exceptional value, stunning design, and premium locations.
-            </p>
-          </div>
-          <a
-            href="#"
-            className="inline-flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 mt-6 lg:mt-0 group"
-          >
-            <span>View All Properties</span>
-            <span className="group-hover:translate-x-1 transition-transform">
-              <ArrowRight />
-            </span>
-          </a>
+    <section className="py-24 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <SectionTitle title="Our Properties" />
+          <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-primary mb-6">
+            Expertise in Every <span className="text-gold-500">Dimension</span>
+          </h2>
+          <p className="text-text-secondary text-lg">
+            From scenic residential plots to contemporary housing developments
+            and boutique nature resorts — our work embodies the seamless blend of
+            luxury and sustainability.
+          </p>
         </div>
 
-        {/* Properties Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {properties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+        {/* Service Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {['Land Development', 'Residential Construction', 'Eco-Tourism Projects'].map(
+            (category, index) => (
+              <div
+                key={index}
+                className="bg-gold-500/10 border border-gold-500/30 rounded-full px-6 py-3 text-gold-600 font-semibold hover:bg-gold-500 hover:text-black-900 cursor-pointer transition-all duration-300"
+              >
+                {category}
+              </div>
+            )
+          )}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] justify-items-center gap-8">
+          {properties.map((project, index) => (
+            <PropertyCard key={index} project={project} />
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <button className="bg-gradient-gold text-black-900 px-10 py-4 rounded-full font-semibold text-lg hover:shadow-gold-lg transition-all duration-300 hover:scale-105">
+            View All Projects
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default FeaturedProperties
+export default FeaturedProperties;

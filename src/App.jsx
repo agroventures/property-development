@@ -9,6 +9,8 @@ import Properties from './pages/Properties'
 import Loader from './components/common/Loader'
 import NotFound from './components/NotFound'
 import ScrollToTop from './components/ScrollToTop'
+import TermsOfService from './pages/termsOfService'
+import PrivacyPolicy from './pages/privacyPolicy'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -36,8 +38,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/properties' element={<Properties />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/terms' element={<Contact />} />
-          <Route path='/privacy' element={<Contact />} />
+          <Route path='/terms' element={<TermsOfService />} />
+          <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

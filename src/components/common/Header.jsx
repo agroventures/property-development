@@ -1,101 +1,103 @@
-import { Menu, X } from 'lucide-react'; // Note: 'Menu' is the standard Lucide icon name
 import React, { useEffect, useState } from 'react';
 import { navLinks } from '../../data/content';
-import { Link, useLocation } from 'react-router-dom'; // 1. Import useLocation
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    
-    // 2. Initialize location
-    const location = useLocation();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // 3. Helper function to check if path is active
-    const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${
-            scrolled 
-                ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+                ? 'bg-white backdrop-blur-md shadow-gold'
                 : 'bg-transparent'
-        }`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
+                }`}
+        >
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <div className="flex items-center space-x-3">
-                        <img src="/logo.png" alt="Logo" className="h-30" />
+                    <div className="flex items-center gap-3">
+                        <img
+                            src="/logo.png"
+                            alt="Logo"
+                            className="h-12"
+                        />
                     </div>
 
-                    {/* Desktop Menu */}
-                    <div className="hidden lg:flex items-center space-x-8">
-                        {navLinks.map((item) => {
-                            const active = isActive(item.url); // Check state
-                            return (
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center gap-8">
+                        {navLinks.map(
+                            (item) => (
                                 <Link
                                     key={item.id}
                                     to={item.url}
-                                    className={`font-medium transition-colors duration-200 ${
-                                        active 
-                                            ? (scrolled ? 'text-primary-600' : 'text-white border-b-2 border-primary-500') 
-                                            : (scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white/80 hover:text-white')
-                                    }`}
+                                    className={`text-sm ${isScrolled ? 'text-gold-950' : 'text-ivory-200'} hover:text-gold-500 transition-colors duration-300 tracking-wide`}
                                 >
                                     {item.name}
                                 </Link>
-                            );
-                        })}
-                    </div>
-
-                    {/* CTA Buttons */}
-                    <div className="hidden lg:flex items-center space-x-4">
-                        <button className={`font-medium transition ${
-                            scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'
-                        }`}>
-                            Sign In
-                        </button>
-                        <button className="bg-linear-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 shadow-gold hover:shadow-gold-lg transform hover:-translate-y-0.5">
-                            List Property
+                            )
+                        )}
+                        <button className="bg-gradient-gold text-black-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-gold-lg transition-all duration-300 hover:scale-105">
+                            Get Started
                         </button>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className={`lg:hidden ${scrolled ? 'text-primary-950' : 'text-white'}`}
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        className="lg:hidden text-ivory-200 p-2"
                     >
-                        {isOpen ? <X /> : <Menu />}
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            {mobileMenuOpen ? (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            ) : (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            )}
+                        </svg>
                     </button>
                 </div>
 
                 {/* Mobile Menu */}
-                {isOpen && (
-                    <div className="lg:hidden py-4 bg-white rounded-2xl shadow-xl mt-2 animate-scale-in">
-                        <div className="flex flex-col space-y-4 p-4">
-                            {navLinks.map((item) => (
-                                <Link 
-                                    key={item.id} 
-                                    to={item.url} 
-                                    onClick={() => setIsOpen(false)}
-                                    className={`font-medium py-2 transition-colors ${
-                                        isActive(item.url) ? 'text-primary-600' : 'text-gray-700 hover:text-primary-600'
-                                    }`}
+                {mobileMenuOpen && (
+                    <div className="lg:hidden bg-black-800 rounded-2xl mb-4 p-6 animate-scale-in">
+                        {navLinks.map(
+                            (item) => (
+                                <Link
+                                    key={item.id}
+                                    to={item.url}
+                                    className="block py-3 text-gold-950 hover:text-gold-500 transition-colors border-b border-gold-900/30 last:border-0"
                                 >
                                     {item.name}
                                 </Link>
-                            ))}
-                            <hr className="border-gray-200" />
-                            <button className="bg-linear-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-full font-medium w-full">
-                                List Property
-                            </button>
-                        </div>
+                            )
+                        )}
+                        <button className="w-full mt-4 bg-gradient-gold text-black-900 px-6 py-3 rounded-full font-semibold">
+                            Get Started
+                        </button>
                     </div>
                 )}
             </div>

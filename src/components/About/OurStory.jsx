@@ -1,60 +1,35 @@
 import { Play } from 'lucide-react';
 import React, { useState } from 'react'
+import SectionTitle from '../common/SectionTitle';
 
 const OurStory = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-bg-main">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <SectionTitle title="Our Story" />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="inline-flex items-center space-x-2 text-primary-600 font-semibold mb-4">
-              <span className="w-12 h-0.5 bg-primary-500"></span>
-              <span>Our Story</span>
-            </span>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-950 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               A Legacy of Excellence in
               <span className="text-primary-600"> Real Estate</span>
             </h2>
-            
-            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-              <p>
-                Founded in 2008, Elite Estates began with a simple vision: to transform the 
-                luxury real estate experience by combining unparalleled expertise with 
-                personalized service.
-              </p>
-              <p>
-                What started as a boutique agency in Beverly Hills has grown into an 
-                internationally recognized brand, serving clients across major metropolitan 
-                areas and exclusive destinations worldwide.
-              </p>
-              <p>
-                Our success is built on a foundation of trust, integrity, and an unwavering 
-                commitment to exceeding our clients' expectations. Every property we represent, 
-                every transaction we facilitate, reflects our dedication to excellence.
-              </p>
-            </div>
 
-            {/* Founder Quote */}
-            <div className="mt-10 p-6 bg-primary-50 rounded-2xl border-l-4 border-primary-500">
-              <p className="text-primary-950 italic text-lg mb-4">
-                "We don't just sell properties; we help people find their place in the world. 
-                Every home has a story, and we're honored to be part of our clients' journeys."
+            <div className="space-y-6 text-text-secondary text-lg leading-relaxed">
+              <p>
+                Agroventures Property Development (Pvt) Ltd was born from the success and heritage of
+                Agroventures Plantations (Pvt) Ltd, a leader in Sri Lanka’s agricultural and plantation sector.
+                Our evolution into property development was a natural extension of our deep connection
+                with the land - transforming fertile plantations into sustainable, high-value real estate
+                opportunities
               </p>
-              <div className="flex items-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
-                  alt="Founder"
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-200"
-                />
-                <div className="ml-4">
-                  <p className="font-bold text-primary-950">Jonathan Sterling</p>
-                  <p className="text-primary-600 text-sm">Founder & CEO</p>
-                </div>
-              </div>
+              <p>
+                We blend agricultural wisdom, modern engineering, and environmental foresight to create developments that are not just profitable but purposeful.
+              </p>
             </div>
           </div>
 
@@ -67,7 +42,7 @@ const OurStory = () => {
                 className="w-full h-150 object-cover"
               />
               <div className="absolute inset-0 bg-primary-950/30"></div>
-              
+
               {/* Play Button */}
               <button
                 onClick={() => setIsVideoPlaying(true)}
@@ -80,7 +55,7 @@ const OurStory = () => {
             </div>
 
             {/* Floating Stats Card */}
-            <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 max-w-xs">
+            {/* <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 max-w-xs">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-linear-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center">
                   <span className="text-white text-2xl font-bold">15+</span>
@@ -90,7 +65,7 @@ const OurStory = () => {
                   <p className="text-gray-500">Serving premium clients</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

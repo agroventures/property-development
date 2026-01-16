@@ -1,70 +1,84 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom Colors */
-  --color-primary-50: #f9f8f3;
-  --color-primary-100: #f0ede0;
-  --color-primary-200: #e2dcc4;
-  --color-primary-300: #d0c69f;
-  --color-primary-400: #bfad7d;
-  --color-primary-500: #a39662;
-  --color-primary-600: #8a7d4f;
-  --color-primary-700: #716642;
-  --color-primary-800: #5e5439;
-  --color-primary-900: #4f4732;
-  --color-primary-950: #3a3210;
+  /* ===============================
+     BRAND CORE (LOGO-BASED)
+  =============================== */
 
-  --color-secondary-50: #faf9f5;
-  --color-secondary-100: #f0ede0;
-  --color-secondary-200: #ddd6bc;
-  --color-secondary-300: #c7ba90;
-  --color-secondary-400: #b5a06d;
-  --color-secondary-500: #a39662;
-  --color-secondary-600: #877a4a;
-  --color-secondary-700: #6b603d;
-  --color-secondary-800: #5a5036;
-  --color-secondary-900: #4d4530;
-  --color-secondary-950: #3a3210;
+  --color-gold-50:  #f9f8f3;
+  --color-gold-100: #f0ede0;
+  --color-gold-200: #e2dcc4;
+  --color-gold-300: #d0c69f;
+  --color-gold-400: #bfad7d;
+  --color-gold-500: #a39662; /* MAIN BRAND GOLD */
+  --color-gold-600: #8a7d4f;
+  --color-gold-700: #716642;
+  --color-gold-800: #5e5439;
+  --color-gold-900: #4f4732;
+  --color-gold-950: #3a3210;
 
-  /* Accent/Gold Colors */
-  --color-gold-50: #fefdf8;
-  --color-gold-100: #fcf9e8;
-  --color-gold-200: #f8f0c8;
-  --color-gold-300: #f2e29f;
-  --color-gold-400: #e9ce6d;
-  --color-gold-500: #ddb94a;
-  --color-gold-600: #c49d36;
-  --color-gold-700: #a37a2c;
-  --color-gold-800: #86612a;
-  --color-gold-900: #6f5027;
-  --color-gold-950: #412b13;
+  /* ===============================
+     LUXURY NEUTRALS
+  =============================== */
 
-  /* Custom Fonts */
+  --color-ivory-50:  #ffffff;
+  --color-ivory-100: #f6f3ea; /* MAIN LIGHT BG */
+  --color-ivory-200: #e6dfc9;
+  --color-ivory-300: #d6cfb3;
+  --color-ivory-400: #b7ae96;
+
+  /* ===============================
+     DARK LUXURY
+  =============================== */
+
+  --color-black-900: #000000;
+  --color-black-800: #1c1c1c;
+  --color-black-700: #2a2a2a;
+
+  /* ===============================
+     SEMANTIC TOKENS (VERY IMPORTANT)
+  =============================== */
+
+  --color-bg-main: var(--color-ivory-100);
+  --color-bg-dark: var(--color-black-900);
+  --color-bg-surface: var(--color-ivory-200);
+
+  --color-text-primary: var(--color-black-800);
+  --color-text-secondary: #5e5a4a;
+  --color-text-inverse: #efe9d8;
+
+  --color-border-muted: var(--color-ivory-300);
+
+  /* ===============================
+     FONTS
+  =============================== */
+
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 
-  /* Custom Animations */
-  --animate-fade-in: fade-in 0.5s ease-out;
-  --animate-slide-up: slide-up 0.5s ease-out;
-  --animate-scale-in: scale-in 0.3s ease-out;
+  /* ===============================
+     ANIMATIONS
+  =============================== */
+
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-scale-in: scale-in 0.35s ease-out;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
+/* ===============================
+   KEYFRAMES
+=============================== */
 
-  to {
-    opacity: 1;
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -74,107 +88,98 @@
 @keyframes scale-in {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-/* Custom Scrollbar */
+/* ===============================
+   SCROLLBAR (LUXURY STYLE)
+=============================== */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9f8f3;
+  background: var(--color-ivory-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a39662;
-  border-radius: 4px;
+  background: var(--color-gold-500);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a7d4f;
+  background: var(--color-gold-600);
 }
 
-/* Selection Color */
+/* ===============================
+   SELECTION
+=============================== */
+
 ::selection {
-  background-color: #a39662;
-  color: white;
+  background-color: var(--color-gold-500);
+  color: #000;
 }
 
-/* Smooth Scrolling */
+/* ===============================
+   BASE STYLES
+=============================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Utilities */
+/* ===============================
+   CUSTOM UTILITIES
+=============================== */
+
 @utility text-gradient {
-  background: linear-gradient(135deg, #a39662 0%, #d4c896 50%, #a39662 100%);
+  background: linear-gradient(
+    135deg,
+    #a39662 0%,
+    #d6cfb3 50%,
+    #a39662 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 @utility bg-gradient-gold {
-  background: linear-gradient(135deg, #a39662 0%, #c4b57a 50%, #a39662 100%);
+  background: linear-gradient(
+    135deg,
+    #a39662 0%,
+    #c4b57a 50%,
+    #a39662 100%
+  );
 }
 
 @utility bg-gradient-dark {
-  background: linear-gradient(135deg, #3a3210 0%, #5a5036 50%, #3a3210 100%);
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #3a3210 50%,
+    #000000 100%
+  );
 }
 
 @utility shadow-gold {
-  box-shadow: 0 10px 40px -10px rgba(163, 150, 98, 0.4);
+  box-shadow: 0 10px 40px -12px rgba(163, 150, 98, 0.35);
 }
 
 @utility shadow-gold-lg {
-  box-shadow: 0 20px 60px -15px rgba(163, 150, 98, 0.5);
-}
-
-@keyframes rotateDots {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes twinkle {
-
-  0%,
-  100% {
-    opacity: 0.1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.6;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes loadingDot {
-
-  0%,
-  80%,
-  100% {
-    opacity: 0.3;
-  }
-
-  40% {
-    opacity: 1;
-  }
+  box-shadow: 0 24px 70px -18px rgba(163, 150, 98, 0.45);
 }

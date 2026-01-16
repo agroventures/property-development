@@ -1,100 +1,119 @@
-import { LocateIcon, Mail, Phone } from 'lucide-react';
-import React from 'react'
-import { navLinks } from '../../data/content';
-import { Link } from 'react-router-dom';
+import { navLinks } from "../../data/content";
+import { properties } from "../../data/properties";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-950/80 text-gray-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="Logo" className="h-30" />
+    <footer className="bg-black-900 border-t border-gold-500/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Brand */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-white/75 p-2 rounded-2xl">
+                  <img src="/logo.png" alt="Logo" className="h-10" />
+                </div>
+              </div>
+              <p className="text-ivory-400 text-sm leading-relaxed mb-6">
+                Building legacies and creating sustainable futures across Sri
+                Lanka's most promising regions.
+              </p>
+              <p className="text-gold-500 text-sm">
+                A subsidiary of Agroventures Plantations (Pvt) Ltd
+              </p>
             </div>
-            <p className="mb-6 leading-relaxed">
-              Your trusted partner in luxury real estate. We specialize in exceptional properties for discerning clients.
-            </p>
-            <div className="flex space-x-4">
-              {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-5 h-5 bg-current rounded-sm opacity-60"></div>
-                </a>
-              ))}
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
+                Quick Links
+              </h4>
+              <ul className="space-y-3">
+                {navLinks.map(
+                  (link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.url}
+                        className="text-ivory-400 hover:text-gold-500 transition-colors text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+
+            {/* Projects */}
+            <div>
+              <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
+                Featured Projects
+              </h4>
+              <ul className="space-y-3">
+                {properties.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href='/properties'
+                      className="text-ivory-400 hover:text-gold-500 transition-colors text-sm"
+                    >
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Newsletter */}
+            <div>
+              <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
+                Stay Updated
+              </h4>
+              <p className="text-ivory-400 text-sm mb-4">
+                Subscribe to our newsletter for the latest projects and investment
+                opportunities.
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 bg-black-800 border border-gold-500/20 rounded-full px-4 py-3 text-sm text-text-inverse placeholder:text-ivory-400 focus:outline-none focus:border-gold-500 transition-colors"
+                />
+                <button className="bg-gold-500 text-black-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gold-400 transition-colors">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-4">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <Link to={link.url} className="hover:text-primary-400 transition-colors">{link.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Property Types */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Property Types</h3>
-            <ul className="space-y-4">
-              {['Luxury Villas', 'Penthouses', 'Waterfront Homes', 'Country Estates', 'Commercial', 'Investment'].map((type) => (
-                <li key={type}>
-                  <a href="#" className="hover:text-primary-400 transition-colors">{type}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <span className="text-primary-500 mt-1"><LocateIcon /></span>
-                <span>123 Luxury Avenue<br />Beverly Hills, CA 90210</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-primary-500"><Phone /></span>
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-primary-500"><Mail /></span>
-                <span>hello@eliteestates.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="border-t border-primary-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Agro Ventures Property Development. All rights reserved. Developed by{" "}
+          {/* Bottom Bar */}
+          <div className="mt-16 pt-8 border-t border-gold-500/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-ivory-400 text-sm">
+              © 2024 Agroventures Property Development (Pvt) Ltd. All rights reserved. Developed by{" "}
             <a
               href="https://ventrax.lk"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-primary-500 hover:text-primary-400 
-                           underline underline-offset-4 transition-colors"
+              className="font-semibold text-gold-500 hover:text-gold-300 transition-colors"
             >
               Ventrax.lk
-            </a></p>
-          <div className="flex space-x-8 mt-4 md:mt-0 text-sm">
-            <a href="#" className="hover:text-primary-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary-400 transition-colors">Cookie Policy</a>
+            </a>
+            </p>
+            <div className="flex gap-6">
+              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(
+                (link) => (
+                  <a
+                    key={link}
+                    href="#"
+                    className="text-ivory-400 hover:text-gold-500 transition-colors text-sm"
+                  >
+                    {link}
+                  </a>
+                )
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 
-export default Footer
+export default Footer;
