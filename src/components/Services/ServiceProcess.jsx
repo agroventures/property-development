@@ -1,93 +1,117 @@
 import React from 'react'
 import { Search, FileCheck, MessageSquare, Key, CheckCircle2 } from 'lucide-react'
 
-const steps = [
-  {
-    id: 1,
-    icon: Search,
-    title: 'Discovery',
-    description: 'We understand your needs, preferences, and budget to find the perfect match.'
-  },
-  {
-    id: 2,
-    icon: MessageSquare,
-    title: 'Consultation',
-    description: 'Our experts provide personalized advice and property recommendations.'
-  },
-  {
-    id: 3,
-    icon: FileCheck,
-    title: 'Documentation',
-    description: 'We handle all paperwork, legal checks, and verification processes.'
-  },
-  {
-    id: 4,
-    icon: Key,
-    title: 'Closing',
-    description: 'Seamless transaction completion and handover of your new property.'
-  }
-]
-
 const ServiceProcess = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-            How It Works
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
-            Our Simple Process
-          </h2>
-          <p className="text-gray-600 text-lg">
-            We've streamlined the real estate process to make it easy and stress-free for you.
-          </p>
-        </div>
+    <section className="py-24 lg:py-32 bg-ivory-100">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
+          <div>
+            <span className="inline-block text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4">
+              Development Process
+            </span>
+            <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
+              From Vision to{' '}
+              <span className="text-gold-500">Reality</span>
+            </h2>
+            <p className="text-text-secondary text-lg leading-relaxed mb-8">
+              Our comprehensive development process ensures every project is
+              executed with precision, transparency, and a commitment to
+              excellence at every stage.
+            </p>
 
-        {/* Process Steps */}
-        <div className="relative">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-linear-to-r from-primary-200 via-primary-400 to-primary-200" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div key={step.id} className="relative text-center group">
-                {/* Step Number */}
-                <div className="relative z-10 mx-auto mb-6">
-                  <div className="w-20 h-20 bg-linear-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                    <step.icon className="w-8 h-8 text-white" />
+            <div className="space-y-6">
+              {[
+                {
+                  step: '01',
+                  title: 'Consultation & Planning',
+                  desc: 'Understanding your vision, requirements, and investment goals.',
+                },
+                {
+                  step: '02',
+                  title: 'Site Analysis & Design',
+                  desc: 'Comprehensive site evaluation and architectural concept development.',
+                },
+                {
+                  step: '03',
+                  title: 'Development & Construction',
+                  desc: 'Expert execution with quality materials and sustainable practices.',
+                },
+                {
+                  step: '04',
+                  title: 'Handover & Support',
+                  desc: 'Seamless property handover with ongoing after-sales support.',
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 group cursor-pointer"
+                >
+                  <div className="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500 transition-all duration-300">
+                    <span className="font-display text-xl font-bold text-gold-600 group-hover:text-black-900 transition-colors">
+                      {item.step}
+                    </span>
                   </div>
-                  {/* Step Number Badge */}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-primary-500 rounded-full flex items-center justify-center font-bold text-primary-600 text-sm shadow-md">
-                    {step.id}
+                  <div>
+                    <h4 className="font-display text-lg font-bold text-text-primary mb-1 group-hover:text-gold-600 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-text-secondary text-sm">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {step.description}
-                </p>
-
-                {/* Arrow for larger screens */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-24 -right-4 transform translate-x-1/2">
-                    <CheckCircle2 className="w-8 h-8 text-primary-400" />
-                  </div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <button className="inline-flex items-center gap-2 bg-linear-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Start Your Journey
-          </button>
+          {/* Right Visual */}
+          <div className="relative">
+            <div className="bg-black-900 rounded-3xl p-8 lg:p-12 shadow-gold-lg">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-gold-500/10 rounded-2xl p-6 border border-gold-500/20">
+                  <div className="text-4xl mb-4">📋</div>
+                  <div className="font-display text-3xl font-bold text-gradient mb-1">
+                    100%
+                  </div>
+                  <div className="text-ivory-400 text-sm">
+                    Client Satisfaction
+                  </div>
+                </div>
+                <div className="bg-gold-500/10 rounded-2xl p-6 border border-gold-500/20">
+                  <div className="text-4xl mb-4">🏗️</div>
+                  <div className="font-display text-3xl font-bold text-gradient mb-1">
+                    50+
+                  </div>
+                  <div className="text-ivory-400 text-sm">
+                    Projects Delivered
+                  </div>
+                </div>
+                <div className="bg-gold-500/10 rounded-2xl p-6 border border-gold-500/20">
+                  <div className="text-4xl mb-4">🌱</div>
+                  <div className="font-display text-3xl font-bold text-gradient mb-1">
+                    100%
+                  </div>
+                  <div className="text-ivory-400 text-sm">
+                    Eco-Compliant
+                  </div>
+                </div>
+                <div className="bg-gold-500/10 rounded-2xl p-6 border border-gold-500/20">
+                  <div className="text-4xl mb-4">⏱️</div>
+                  <div className="font-display text-3xl font-bold text-gradient mb-1">
+                    On-Time
+                  </div>
+                  <div className="text-ivory-400 text-sm">
+                    Delivery Record
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Decorative */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gold-500/20 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gold-500/30 rounded-full blur-xl" />
+          </div>
         </div>
       </div>
     </section>

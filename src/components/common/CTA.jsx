@@ -47,11 +47,15 @@ const CTA = () => {
                     key={index}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-black-700 transition-colors"
                   >
-                    <div className="text-2xl">{item.icon}</div>
+                    <div className="text-2xl">
+                      <item.icon className="w-5 h-5 text-gold-500" />
+                    </div>
                     <div>
-                      <div className="text-ivory-400 text-sm">{item.label}</div>
+                      <div className="text-ivory-400 text-sm">{item.title}</div>
                       <div className="text-text-inverse font-medium">
-                        {item.value}
+                        {item.details.map((detail, idx) => (
+                          <p key={idx} className="text-gray-600 text-sm">{detail}</p>
+                        ))}
                       </div>
                     </div>
                   </div>

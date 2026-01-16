@@ -7,6 +7,8 @@ import ServiceProcess from '../components/Services/ServiceProcess'
 import WhyChooseUs from '../components/common/WhyChooseUs'
 import FAQ from '../components/Services/FAQ'
 import ServicesCTA from '../components/Services/ServicesCTA'
+import ServiceApproaches from '../components/Services/ServiceApproaches'
+import ServicesSummary from '../components/Services/ServicesSummary'
 
 function Services() {
   return (
@@ -14,9 +16,9 @@ function Services() {
       <Header />
       <ServicesHero />
       <ServicesList />
+      <ServiceApproaches />
       <ServiceProcess />
-      <WhyChooseUs />
-      <FAQ />
+      <ServicesSummary />
       <ServicesCTA />
       <Footer />
     </div>

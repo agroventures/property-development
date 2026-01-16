@@ -38,14 +38,13 @@ const ContactMap = () => {
                         <div className="space-y-8">
                             {/* Address */}
                             <div>
-                                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                                    <Navigation className="w-6 h-6 text-primary-600" />
+                                <div className="w-12 h-12 bg-bg-main rounded-xl flex items-center justify-center mb-4">
+                                    <Navigation className="w-6 h-6 text-text-primary" />
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">Headquarters</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">Head Office</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    123 Real Estate Boulevard<br />
-                                    Manhattan, New York<br />
-                                    NY 10001, USA
+                                    No 48, Sir Marcus Fernando Mawathe<br />
+                                    Colombo 07
                                 </p>
                             </div>
 
@@ -56,8 +55,7 @@ const ContactMap = () => {
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Contact</h3>
                                 <p className="text-gray-600">
-                                    Phone: +1 (555) 123-4567<br />
-                                    Fax: +1 (555) 123-4568
+                                    Phone: +94 77 123 4567<br />
                                 </p>
                             </div>
 
@@ -76,17 +74,8 @@ const ContactMap = () => {
                                         <span>Saturday:</span>
                                         <span className="font-medium">10:00 AM - 4:00 PM</span>
                                     </div>
-                                    <div className="flex justify-between">
-                                        <span>Sunday:</span>
-                                        <span className="font-medium text-red-500">Closed</span>
-                                    </div>
                                 </div>
                             </div>
-
-                            {/* CTA Button */}
-                            <button className="w-full bg-linear-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-                                Get Directions
-                            </button>
                         </div>
                     </div>
                 </div>

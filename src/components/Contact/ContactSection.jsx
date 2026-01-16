@@ -2,41 +2,13 @@ import React, { useState } from 'react'
 import { 
     Phone, 
     Mail, 
-    MapPin, 
-    Clock, 
     Send, 
     User, 
     MessageSquare,
     Building,
     CheckCircle
 } from 'lucide-react'
-
-const contactInfo = [
-    {
-        icon: Phone,
-        title: 'Phone',
-        details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-        color: 'bg-blue-50 text-blue-600'
-    },
-    {
-        icon: Mail,
-        title: 'Email',
-        details: ['hello@eliteestates.com', 'support@eliteestates.com'],
-        color: 'bg-green-50 text-green-600'
-    },
-    {
-        icon: MapPin,
-        title: 'Address',
-        details: ['123 Real Estate Boulevard', 'New York, NY 10001'],
-        color: 'bg-purple-50 text-purple-600'
-    },
-    {
-        icon: Clock,
-        title: 'Business Hours',
-        details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat - Sun: 10:00 AM - 4:00 PM'],
-        color: 'bg-orange-50 text-orange-600'
-    }
-]
+import { contactInfo, socialLinks } from '../../data/content'
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -107,14 +79,14 @@ const ContactSection = () => {
                             <div className="mt-8">
                                 <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
                                 <div className="flex gap-3">
-                                    {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+                                    {socialLinks.map((social, index) => (
                                         <a
-                                            key={social}
-                                            href={`#${social}`}
+                                            key={index}
+                                            href={social.url}
                                             className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:bg-primary-50 transition-all duration-300 group"
                                         >
                                             <span className="text-gray-600 group-hover:text-primary-600 capitalize text-xs font-medium">
-                                                {social.charAt(0).toUpperCase()}
+                                                {social.icon}
                                             </span>
                                         </a>
                                     ))}
@@ -305,7 +277,7 @@ const ContactSection = () => {
                                     {/* Submit Button */}
                                     <button
                                         type="submit"
-                                        className="w-full inline-flex items-center justify-center gap-2 bg-linear-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                        className="w-full inline-flex items-center justify-center gap-2 bg-bg-dark hover:bg-bg-dark/80 text-white py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                     >
                                         <Send className="w-5 h-5" />
                                         Send Message

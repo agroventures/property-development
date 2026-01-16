@@ -1,4 +1,4 @@
-import { Award, Eye, Facebook, Globe, Group, Instagram, Leaf, Linkedin, Recycle, Shield, Youtube } from "lucide-react";
+import { Award, Clock, Eye, Facebook, Globe, Group, Instagram, Leaf, Linkedin, Mail, MapPin, Phone, Recycle, Shield, Youtube } from "lucide-react";
 
 // Nav Links
 export const navLinks = [
@@ -45,7 +45,7 @@ export const testimonials = [
 export const team = [
     {
         name: 'Prabhath Gamage',
-        role: 'Chief Operating Officer',
+        role: 'General Manager',
         image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80',
         bio: 'Former VP at Christie\'s Real Estate',
     },
@@ -57,7 +57,7 @@ export const team = [
     },
     {
         name: 'Sithumini Perera',
-        role: 'Head of Marketing',
+        role: 'Human Resources',
         image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=761&q=80',
         bio: 'Award-winning marketing strategist',
     },
@@ -115,12 +115,32 @@ export const socialLinks = [
     { url: 'https://www.youtube.com/@AgroVenturesPropertyDevelopment', icon: <Youtube size={20} /> },
 ];
 
-// COntact Info
+// Contact Info
 export const contactInfo = [
-    { icon: '📍', label: 'Address', value: 'Colombo, Sri Lanka' },
-    { icon: '📞', label: 'Phone', value: '+94 11 234 5678' },
-    { icon: '✉️', label: 'Email', value: 'info@avproperty.lk', },
-    { icon: '🕒', label: 'Hours', value: 'Mon - Sat: 9AM - 6PM' },
+    {
+        icon: Phone,
+        title: 'Phone',
+        details: ['+94 77 123 4567'],
+        color: 'bg-blue-50 text-blue-600'
+    },
+    {
+        icon: Mail,
+        title: 'Email',
+        details: ['info@avproperty.lk.com'],
+        color: 'bg-green-50 text-green-600'
+    },
+    {
+        icon: MapPin,
+        title: 'Address',
+        details: ['48, Sir Marcus Fernando Mawathe, Colombo 07'],
+        color: 'bg-purple-50 text-purple-600'
+    },
+    {
+        icon: Clock,
+        title: 'Business Hours',
+        details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
+        color: 'bg-orange-50 text-orange-600'
+    }
 ]
 
 // Mission 

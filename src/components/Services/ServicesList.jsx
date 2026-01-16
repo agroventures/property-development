@@ -1,12 +1,12 @@
-import React from 'react'
-import { 
-  Home, 
-  Key, 
-  Building, 
-  TrendingUp, 
-  FileText, 
-  Palette, 
-  Calculator, 
+import React, { useState } from 'react'
+import {
+  Home,
+  Key,
+  Building,
+  TrendingUp,
+  FileText,
+  Palette,
+  Calculator,
   Handshake,
   ArrowRight
 } from 'lucide-react'
@@ -14,146 +14,381 @@ import {
 const services = [
   {
     id: 1,
-    icon: Home,
-    title: 'Property Sales',
-    description: 'Expert assistance in buying and selling residential and commercial properties with maximum value.',
-    features: ['Market Analysis', 'Price Negotiation', 'Closing Support'],
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50',
-    iconColor: 'text-blue-600'
+    title: 'Land Development',
+    subtitle: 'Transforming Land into Legacy',
+    description:
+      'We specialize in identifying and transforming strategically located land into premium, investment-ready plots and sustainable residential communities.',
+    details:
+      'Our development process integrates modern infrastructure planning, green landscaping, and long-term land value appreciation.',
+    icon: (
+      <svg
+        className="w-10 h-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+        />
+      </svg>
+    ),
+    features: [
+      'Strategic location identification',
+      'Infrastructure planning & development',
+      'Green landscaping integration',
+      'Investment-ready plot creation',
+      'Community masterplanning',
+      'Utility & road network development',
+    ],
+    project: {
+      name: 'Green Valley Estate',
+      location: 'Melsiripura',
+      description:
+        'A sustainable mixed-use land development combining residential, agricultural, and leisure spaces for a balanced lifestyle.',
+      status: 'Ongoing',
+      highlights: ['50+ Acres', 'Mixed-Use Development', 'Organic Living'],
+    },
   },
   {
     id: 2,
-    icon: Key,
-    title: 'Property Rentals',
-    description: 'Find the perfect rental property or tenant with our comprehensive rental services.',
-    features: ['Tenant Screening', 'Lease Preparation', 'Rent Collection'],
-    color: 'from-green-500 to-green-600',
-    bgColor: 'bg-green-50',
-    iconColor: 'text-green-600'
+    title: 'Residential Construction',
+    subtitle: 'Building Dreams into Reality',
+    description:
+      'We design and build homes that embody luxury, functionality, and environmental harmony. Every project reflects architectural sophistication, smart living, and enduring craftsmanship.',
+    details:
+      'From contemporary villas to premium housing estates, our residential developments set new standards in modern living while respecting traditional values.',
+    icon: (
+      <svg
+        className="w-10 h-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+        />
+      </svg>
+    ),
+    features: [
+      'Architectural design excellence',
+      'Smart home integration',
+      'Sustainable building materials',
+      'Premium interior finishes',
+      'Energy-efficient systems',
+      'Landscaped surroundings',
+    ],
+    project: {
+      name: 'AgroHomes Enclave',
+      location: 'Kurunegala',
+      description:
+        'A curated collection of modern homes and serviced plots that offer residents a premium lifestyle within a natural, serene environment.',
+      status: 'Phase 2',
+      highlights: ['Premium Villas', 'Serviced Plots', 'Gated Community'],
+    },
   },
   {
     id: 3,
-    icon: Building,
-    title: 'Property Management',
-    description: 'Complete property management solutions for landlords and property investors.',
-    features: ['Maintenance', '24/7 Support', 'Financial Reports'],
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-purple-50',
-    iconColor: 'text-purple-600'
+    title: 'Eco-Tourism Development',
+    subtitle: 'Where Nature Meets Luxury',
+    description:
+      'Our eco-tourism ventures merge real estate with sustainability, creating exclusive destinations where nature and comfort coexist beautifully.',
+    details:
+      'We design experiences that nurture the environment while offering unique hospitality value, setting new benchmarks in responsible tourism.',
+    icon: (
+      <svg
+        className="w-10 h-10"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+        />
+      </svg>
+    ),
+    features: [
+      'Sustainable architecture',
+      'Nature conservation integration',
+      'Wellness & retreat facilities',
+      'Eco-friendly operations',
+      'Local community engagement',
+      'Unique guest experiences',
+    ],
+    project: {
+      name: 'The Nature Retreat',
+      location: 'Matale',
+      description:
+        'An eco-luxury retreat that integrates conservation, wellness, and sustainable architecture in one breathtaking destination.',
+      status: 'Coming Soon',
+      highlights: ['Eco-Luxury', 'Wellness Center', 'Conservation Focus'],
+    },
   },
-  {
-    id: 4,
-    icon: TrendingUp,
-    title: 'Investment Consulting',
-    description: 'Strategic investment advice to maximize your real estate portfolio returns.',
-    features: ['ROI Analysis', 'Market Trends', 'Risk Assessment'],
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-orange-50',
-    iconColor: 'text-orange-600'
-  },
-  {
-    id: 5,
-    icon: FileText,
-    title: 'Legal Services',
-    description: 'Comprehensive legal support for all real estate transactions and documentation.',
-    features: ['Contract Review', 'Title Search', 'Compliance'],
-    color: 'from-red-500 to-red-600',
-    bgColor: 'bg-red-50',
-    iconColor: 'text-red-600'
-  },
-  {
-    id: 6,
-    icon: Palette,
-    title: 'Home Staging',
-    description: 'Professional staging services to showcase your property at its absolute best.',
-    features: ['Interior Design', 'Photography', 'Virtual Tours'],
-    color: 'from-pink-500 to-pink-600',
-    bgColor: 'bg-pink-50',
-    iconColor: 'text-pink-600'
-  },
-  {
-    id: 7,
-    icon: Calculator,
-    title: 'Valuation Services',
-    description: 'Accurate property valuations based on market data and expert analysis.',
-    features: ['Market Comparison', 'Detailed Reports', 'Expert Opinion'],
-    color: 'from-teal-500 to-teal-600',
-    bgColor: 'bg-teal-50',
-    iconColor: 'text-teal-600'
-  },
-  {
-    id: 8,
-    icon: Handshake,
-    title: 'Mortgage Assistance',
-    description: 'Navigate the mortgage process with our expert guidance and lender connections.',
-    features: ['Loan Comparison', 'Pre-Approval', 'Documentation'],
-    color: 'from-indigo-500 to-indigo-600',
-    bgColor: 'bg-indigo-50',
-    iconColor: 'text-indigo-600'
-  }
-]
+];
+
 
 const ServicesList = () => {
-  return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-            What We Offer
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
-            Our Premium Services
-          </h2>
-          <p className="text-gray-600 text-lg">
-            We provide a full spectrum of real estate services designed to make 
-            your property journey seamless and successful.
-          </p>
-        </div>
+  const [activeService, setActiveService] = useState(0);
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
+  return (
+    <>
+    <section className="py-24 lg:py-32 bg-bg-main -mt-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 hover:-translate-y-2"
+              className={`group relative bg-white rounded-3xl p-8 shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 cursor-pointer ${activeService === index ? 'ring-2 ring-gold-500' : ''
+                }`}
+              onClick={() => setActiveService(index)}
             >
-              {/* Icon */}
-              <div className={`${service.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className={`w-7 h-7 ${service.iconColor}`} />
+              {/* Number Badge */}
+              <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center font-display text-xl font-bold text-black-900 shadow-gold">
+                {service.id}
               </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+              {/* Icon */}
+              <div className="w-20 h-20 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6 group-hover:bg-gold-500 group-hover:text-black-900 transition-all duration-300">
+                {service.icon}
+              </div>
+
+              {/* Content */}
+              <h3 className="font-display text-2xl font-bold text-text-primary mb-2 group-hover:text-gold-600 transition-colors">
                 {service.title}
               </h3>
-
-              {/* Description */}
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+              <p className="text-gold-600 text-sm font-medium mb-4">
+                {service.subtitle}
+              </p>
+              <p className="text-text-secondary leading-relaxed mb-6">
                 {service.description}
               </p>
 
-              {/* Features */}
-              <ul className="space-y-2 mb-5">
-                {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-center text-sm text-gray-500">
-                    <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Link */}
-              <button className="inline-flex items-center text-primary-600 font-medium text-sm group/btn">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              {/* Learn More */}
+              <div className="flex items-center gap-2 text-gold-600 font-semibold">
+                <span>Explore Service</span>
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
+
+    <section id="services-detail" className="py-24 lg:py-32 bg-black-900">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Service Tabs */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {services.map((service, index) => (
+              <button
+                key={service.id}
+                onClick={() => setActiveService(index)}
+                className={`flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+                  activeService === index
+                    ? 'bg-gradient-gold text-black-900 shadow-gold-lg'
+                    : 'bg-black-800 text-ivory-300 border border-gold-500/30 hover:border-gold-500/50'
+                }`}
+              >
+                <span
+                  className={
+                    activeService === index ? 'text-black-900' : 'text-gold-500'
+                  }
+                >
+                  {service.icon}
+                </span>
+                {service.title}
+              </button>
+            ))}
+          </div>
+
+          {/* Active Service Content */}
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left - Service Details */}
+            <div className="animate-fade-in">
+              <span className="inline-block text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4">
+                Service {services[activeService].id} of 3
+              </span>
+              <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-inverse mb-4 leading-tight">
+                {services[activeService].title}
+              </h2>
+              <p className="text-gold-400 text-xl font-display italic mb-6">
+                {services[activeService].subtitle}
+              </p>
+              <p className="text-ivory-300 text-lg leading-relaxed mb-6">
+                {services[activeService].description}
+              </p>
+              <p className="text-ivory-400 leading-relaxed mb-8">
+                {services[activeService].details}
+              </p>
+
+              {/* Features Grid */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                {services[activeService].features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 bg-black-800 rounded-xl p-4 border border-gold-500/10 hover:border-gold-500/30 transition-colors"
+                  >
+                    <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <svg
+                        className="w-3.5 h-3.5 text-black-900"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={3}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-ivory-200 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <button className="group bg-gradient-gold text-black-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-gold-lg transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                Discuss Your Project
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Right - Featured Project */}
+            <div className="animate-slide-up">
+              <div className="bg-black-800 rounded-3xl overflow-hidden border border-gold-500/20">
+                {/* Project Image Placeholder */}
+                <div className="relative h-64 bg-linear-to-br from-gold-900/30 to-black-700">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-24 h-24 border-2 border-gold-500/30 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-12 h-12 text-gold-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  {/* Status Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gold-500 text-black-900 px-4 py-1.5 rounded-full text-sm font-semibold">
+                      {services[activeService].project.status}
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-black-900/80 text-ivory-200 px-4 py-1.5 rounded-full text-sm">
+                      Ongoing Project
+                    </span>
+                  </div>
+                </div>
+
+                {/* Project Content */}
+                <div className="p-8">
+                  <div className="flex items-center gap-2 text-gold-500 text-sm mb-2">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    {services[activeService].project.location}
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-text-inverse mb-4">
+                    {services[activeService].project.name}
+                  </h3>
+                  <p className="text-ivory-400 leading-relaxed mb-6">
+                    {services[activeService].project.description}
+                  </p>
+
+                  {/* Highlights */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {services[activeService].project.highlights.map(
+                      (highlight, index) => (
+                        <span
+                          key={index}
+                          className="bg-gold-500/10 border border-gold-500/30 text-gold-400 px-4 py-2 rounded-full text-sm"
+                        >
+                          {highlight}
+                        </span>
+                      )
+                    )}
+                  </div>
+
+                  <button className="flex items-center gap-2 text-gold-500 font-semibold hover:text-gold-400 transition-colors">
+                    View Project Details
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 

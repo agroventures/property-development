@@ -7,8 +7,6 @@ import OurStory from '../components/About/OurStory'
 import CoreValues from '../components/About/CoreValues'
 import MissionVision from '../components/About/MissionVision'
 import TeamSection from '../components/About/TeamSection'
-import TimelineSection from '../components/About/TimelineSection'
-import AwardsSection from '../components/About/AwardsSection'
 
 function About() {
     return (
@@ -19,9 +17,6 @@ function About() {
             <MissionVision />
             <CoreValues />
             <TeamSection />
-            {/* <TimelineSection />
-            <AwardsSection />
-            <CTA /> */}
             <Footer />
         </div>
     )
