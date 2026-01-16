@@ -7,13 +7,13 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-primary-950">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black-900">
       {/* Scattered Background Dots */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
+      <div className="absolute inset-0 overflow-hidden opacity-30">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-primary-400"
+            className="absolute w-1 h-1 rounded-full bg-gold-400"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -26,83 +26,52 @@ const Loader = () => {
 
       <div className="relative flex flex-col items-center z-10">
         {/* Dot Circle Container */}
-        <div className="relative w-40 h-40 flex items-center justify-center">
+        <div className="relative w-48 h-48 flex items-center justify-center">
           
-          {/* Three Rotating Dot Rings */}
+          {/* Outer Rotating Ring */}
           <div className="absolute inset-0" style={{ animation: 'rotateDots 8s linear infinite' }}>
-            {[...Array(6)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
               <div
                 key={`outer-${i}`}
-                className="absolute w-2.5 h-2.5 rounded-full bg-primary-400"
+                className="absolute w-2 h-2 rounded-full bg-gold-500"
                 style={{
                   left: '50%',
                   top: '50%',
-                  transform: `rotate(${i * 60}deg) translateY(-70px) translateX(-50%)`,
-                  opacity: 0.8,
+                  transform: `rotate(${i * 45}deg) translateY(-85px) translateX(-50%)`,
                 }}
               ></div>
             ))}
           </div>
 
-          {/* <div className="absolute inset-4" style={{ animation: 'rotateDots 6s linear infinite reverse' }}>
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={`middle-${i}`}
-                className="absolute w-2 h-2 rounded-full bg-primary-500"
-                style={{
-                  left: '50%',
-                  top: '50%',
-                  transform: `rotate(${i * 60 + 30}deg) translateY(-50px) translateX(-50%)`,
-                  opacity: 0.6,
-                }}
-              ></div>
-            ))}
-          </div>
-
-          <div className="absolute inset-8" style={{ animation: 'rotateDots 4s linear infinite' }}>
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={`inner-${i}`}
-                className="absolute w-1.5 h-1.5 rounded-full bg-primary-300"
-                style={{
-                  left: '50%',
-                  top: '50%',
-                  transform: `rotate(${i * 90}deg) translateY(-30px) translateX(-50%)`,
-                  opacity: 0.5,
-                }}
-              ></div>
-            ))}
-          </div> */}
-
-          {/* Center Logo */}
-          <div className="relative w-25 h-25 rounded-full bg-linear-to-br from-primary-800 to-primary-950 flex items-center justify-center shadow-xl shadow-primary-500/30 border border-primary-700/30">
+          {/* Center Logo Container */}
+          <div className="relative w-32 h-32 rounded-full bg-gold-500/50 flex items-center justify-center shadow-2xl shadow-gold-500/20 border border-gold-500/20 backdrop-blur-md">
             <img
               src={logo}
               alt="Loading..."
-              className="w-20 object-contain"
+              className="w-20 object-contain animate-pulse"
             />
           </div>
         </div>
 
-        {/* Brand */}
+        {/* Brand Typography */}
         <div className="mt-10 text-center">
-          <h1 className="text-xl font-bold tracking-widest">
+          <h1 className="text-2xl font-display font-bold tracking-[0.3em]">
             <span className="text-white">AGRO</span>
-            <span className="text-primary-400 ml-2">VENTURES</span>
+            <span className="text-gold-500 ml-3">VENTURES</span>
           </h1>
-          <p className="text-primary-600/60 text-xs mt-2 tracking-[0.15em]">
-            PROPERTY DEVELOPMENT
+          <p className="text-gold-600/60 text-[10px] mt-3 tracking-[0.4em] font-sans uppercase">
+            Property Development
           </p>
         </div>
 
         {/* Loading Text with Dots */}
-        <div className="mt-6 flex items-center space-x-1 text-primary-400/80 text-sm">
+        <div className="mt-8 flex items-center space-x-2 text-gold-500/60 text-xs font-bold uppercase tracking-widest">
           <span>Loading</span>
-          <span className="flex space-x-0.5">
+          <span className="flex space-x-1">
             {[...Array(3)].map((_, i) => (
               <span
                 key={i}
-                className="w-1 h-1 rounded-full bg-primary-400"
+                className="w-1 h-1 rounded-full bg-gold-500"
                 style={{
                   animation: `loadingDot 1.4s ease-in-out infinite`,
                   animationDelay: `${i * 0.2}s`,

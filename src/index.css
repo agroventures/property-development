@@ -5,7 +5,7 @@
      BRAND CORE (LOGO-BASED)
   =============================== */
 
-  --color-gold-50:  #f9f8f3;
+  --color-gold-50: #f9f8f3;
   --color-gold-100: #f0ede0;
   --color-gold-200: #e2dcc4;
   --color-gold-300: #d0c69f;
@@ -21,7 +21,7 @@
      LUXURY NEUTRALS
   =============================== */
 
-  --color-ivory-50:  #ffffff;
+  --color-ivory-50: #ffffff;
   --color-ivory-100: #f6f3ea; /* MAIN LIGHT BG */
   --color-ivory-200: #e6dfc9;
   --color-ivory-300: #d6cfb3;
@@ -53,8 +53,8 @@
      FONTS
   =============================== */
 
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
 
   /* ===============================
      ANIMATIONS
@@ -70,8 +70,12 @@
 =============================== */
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slide-up {
@@ -93,6 +97,38 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.5);
+  }
+}
+@keyframes rotateDots {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingDot {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -147,33 +183,18 @@ body {
 =============================== */
 
 @utility text-gradient {
-  background: linear-gradient(
-    135deg,
-    #a39662 0%,
-    #d6cfb3 50%,
-    #a39662 100%
-  );
+  background: linear-gradient(135deg, #a39662 0%, #d6cfb3 50%, #a39662 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 @utility bg-gradient-gold {
-  background: linear-gradient(
-    135deg,
-    #a39662 0%,
-    #c4b57a 50%,
-    #a39662 100%
-  );
+  background: linear-gradient(135deg, #a39662 0%, #c4b57a 50%, #a39662 100%);
 }
 
 @utility bg-gradient-dark {
-  background: linear-gradient(
-    135deg,
-    #000000 0%,
-    #3a3210 50%,
-    #000000 100%
-  );
+  background: linear-gradient(135deg, #000000 0%, #3a3210 50%, #000000 100%);
 }
 
 @utility shadow-gold {

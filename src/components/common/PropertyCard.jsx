@@ -1,7 +1,9 @@
-const PropertyCard = ({ project }) => {
+import React from 'react';
+
+const PropertyCard = ({ property, onExplore }) => {
   return (
     <div
-      className="group bg-white rounded-3xl overflow-hidden shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2"
+      className="group bg-white rounded-3xl overflow-hidden shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 border border-ivory-200"
     >
       {/* Image Placeholder */}
       <div className="relative h-64 bg-linear-to-br from-ivory-200 via-ivory-100 to-gold-100 overflow-hidden">
@@ -22,23 +24,25 @@ const PropertyCard = ({ project }) => {
             </svg>
           </div>
         </div>
+        
         {/* Status Badge */}
         <div className="absolute top-4 left-4">
-          <span className="bg-gold-500 text-black-900 px-4 py-1.5 rounded-full text-sm font-semibold">
-            {project.status}
+          <span className="bg-gold-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+            {property.status}
           </span>
         </div>
+        
         {/* Tag */}
         <div className="absolute top-4 right-4">
-          <span className="bg-black-900/80 text-ivory-200 px-4 py-1.5 rounded-full text-sm">
-            {project.tag}
+          <span className="bg-black-900/80 backdrop-blur-md text-ivory-100 px-4 py-1.5 rounded-full text-xs font-medium border border-gold-500/20">
+            {property.tag}
           </span>
         </div>
       </div>
 
       {/* Content */}
       <div className="p-8">
-        <div className="flex items-center gap-2 text-gold-600 text-sm mb-2">
+        <div className="flex items-center gap-2 text-gold-600 text-sm mb-3 font-medium">
           <svg
             className="w-4 h-4"
             fill="none"
@@ -58,18 +62,22 @@ const PropertyCard = ({ project }) => {
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          {project.location}
+          {property.location}
         </div>
-        <h3 className="font-display text-2xl font-bold text-text-primary mb-3 group-hover:text-gold-600 transition-colors">
-          {project.title}
+
+        {/* Using your font-display for luxury feel */}
+        <h3 className="font-display text-2xl font-bold text-black-800 mb-3 group-hover:text-gold-600 transition-colors duration-300">
+          {property.title}
         </h3>
-        <p className="text-text-secondary leading-relaxed mb-6">
-          {project.description}
+
+        <p className="text-text-secondary leading-relaxed mb-8 text-sm line-clamp-2">
+          {property.description}
         </p>
-        <button className="flex items-center gap-2 text-gold-600 font-semibold group/btn">
-          View Project
+
+        <button onClick={onExplore} className="flex items-center gap-2 text-gold-600 font-bold text-sm uppercase tracking-widest group/btn border-b border-transparent hover:border-gold-500 transition-all pb-1">
+          Explore Detail
           <svg
-            className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+            className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -87,4 +95,4 @@ const PropertyCard = ({ project }) => {
   );
 };
 
-export default PropertyCard
+export default PropertyCard;

@@ -1,6 +1,6 @@
 import { properties } from '../../data/properties';
 import SectionTitle from '../common/SectionTitle';
-import PropertyCard from './PropertyCard';
+import PropertyCard from '../common/PropertyCard';
 
 const FeaturedProperties = () => {
   return (
@@ -34,8 +34,8 @@ const FeaturedProperties = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] justify-items-center gap-8">
-          {properties.map((project, index) => (
-            <PropertyCard key={index} project={project} />
+          {properties.map((property, index) => (
+            <PropertyCard key={index} property={property} />
           ))}
         </div>
 

@@ -47,9 +47,9 @@ const Header = () => {
                                 </Link>
                             )
                         )}
-                        <button className="bg-gradient-gold text-black-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-gold-lg transition-all duration-300 hover:scale-105">
+                        {/* <button className="bg-gradient-gold text-black-900 px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-gold-lg transition-all duration-300 hover:scale-105">
                             Get Started
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -96,9 +96,9 @@ const Header = () => {
                                 </Link>
                             )
                         )}
-                        <button className="w-full mt-4 bg-gradient-gold text-black-900 px-6 py-3 rounded-full font-semibold">
+                        {/* <button className="w-full mt-4 bg-gradient-gold text-black-900 px-6 py-3 rounded-full font-semibold">
                             Get Started
-                        </button>
+                        </button> */}
                     </div>
                 )}
             </div>
