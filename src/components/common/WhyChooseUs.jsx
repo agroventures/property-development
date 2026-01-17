@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shield, Award, Clock, Users, Zap, HeartHandshake } from 'lucide-react'
+import { Shield, Award, Clock, Users, Zap, HeartHandshake, Check } from 'lucide-react'
 import { whyChooseUs } from '../../data/content'
 import SectionTitle from './SectionTitle'
 
@@ -55,19 +55,7 @@ const WhyChooseUs = () => {
                   className="flex gap-4 p-4 rounded-2xl hover:bg-ivory-200 transition-colors duration-300"
                 >
                   <div className="w-10 h-10 bg-gold-500 rounded-xl flex items-center justify-center shrink-0">
-                    <svg
-                      className="w-5 h-5 text-black-900"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                    <Check className="w-4 text-black-900" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-text-primary mb-1">

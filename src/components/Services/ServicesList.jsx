@@ -8,7 +8,10 @@ import {
   Palette,
   Calculator,
   Handshake,
-  ArrowRight
+  ArrowRight,
+  Check,
+  Image,
+  MapPin
 } from 'lucide-react'
 import { services } from '../../data/content';
 
@@ -52,19 +55,7 @@ const ServicesList = () => {
               {/* Learn More */}
               <div className="flex items-center gap-2 text-gold-600 font-semibold">
                 <span>Explore Service</span>
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+                <ArrowRight className="w-5 h-5" />
               </div>
             </div>
           ))}
@@ -126,19 +117,7 @@ const ServicesList = () => {
                     className="flex items-start gap-3 bg-black-800 rounded-xl p-4 border border-gold-500/10 hover:border-gold-500/30 transition-colors"
                   >
                     <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <svg
-                        className="w-3.5 h-3.5 text-black-900"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <Check className="w-4 h-4 text-black-900" />
                     </div>
                     <span className="text-ivory-200 text-sm">{feature}</span>
                   </div>
@@ -148,19 +127,7 @@ const ServicesList = () => {
               {/* CTA */}
               <button className="group bg-gradient-gold text-black-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-gold-lg transition-all duration-300 hover:scale-105 flex items-center gap-2">
                 Discuss Your Project
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
 
@@ -171,19 +138,7 @@ const ServicesList = () => {
                 <div className="relative h-64 bg-linear-to-br from-gold-900/30 to-black-700">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-24 h-24 border-2 border-gold-500/30 rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-12 h-12 text-gold-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
+                      <Image className="w-16 h-16" />
                     </div>
                   </div>
                   {/* Status Badge */}
@@ -202,25 +157,7 @@ const ServicesList = () => {
                 {/* Project Content */}
                 <div className="p-8">
                   <div className="flex items-center gap-2 text-gold-500 text-sm mb-2">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+                    <MapPin className="w-4 h-4" />
                     {services[activeService].project.location}
                   </div>
                   <h3 className="font-display text-2xl font-bold text-text-inverse mb-4">
@@ -246,19 +183,7 @@ const ServicesList = () => {
 
                   <button className="flex items-center gap-2 text-gold-500 font-semibold hover:text-gold-400 transition-colors">
                     View Project Details
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
+                    <ArrowRight className="w-4 h-4 text-gold-500" />
                   </button>
                 </div>
               </div>
