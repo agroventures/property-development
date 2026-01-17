@@ -14,6 +14,7 @@ import {
   MapPin
 } from 'lucide-react'
 import { services } from '../../data/content';
+import SectionTitle from '../common/SectionTitle';
 
 
 const ServicesList = () => {
@@ -21,49 +22,52 @@ const ServicesList = () => {
 
   return (
     <>
-    <section className="py-24 lg:py-32 bg-bg-main -mt-16 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className={`group relative bg-white rounded-3xl p-8 shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 cursor-pointer ${activeService === index ? 'ring-2 ring-gold-500' : ''
-                }`}
-              onClick={() => setActiveService(index)}
-            >
-              {/* Number Badge */}
-              <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center font-display text-xl font-bold text-black-900 shadow-gold">
-                {service.id}
-              </div>
+      <section className="py-24 lg:py-32 bg-bg-main -mt-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <SectionTitle title="Our Services" />
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={service.id}
+                className={`group relative bg-white rounded-3xl p-8 shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 cursor-pointer ${activeService === index ? 'ring-2 ring-gold-500' : ''
+                  }`}
+                onClick={() => setActiveService(index)}
+              >
+                {/* Number Badge */}
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center font-display text-xl font-bold text-black-900 shadow-gold">
+                  {service.id}
+                </div>
 
-              {/* Icon */}
-              <div className="w-20 h-20 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6 group-hover:bg-gold-500 group-hover:text-black-900 transition-all duration-300">
-                {service.icon}
-              </div>
+                {/* Icon */}
+                <div className="w-20 h-20 bg-gold-500/10 rounded-2xl flex items-center justify-center text-gold-600 mb-6 group-hover:bg-gold-500 group-hover:text-black-900 transition-all duration-300">
+                  {service.icon}
+                </div>
 
-              {/* Content */}
-              <h3 className="font-display text-2xl font-bold text-text-primary mb-2 group-hover:text-gold-600 transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gold-600 text-sm font-medium mb-4">
-                {service.subtitle}
-              </p>
-              <p className="text-text-secondary leading-relaxed mb-6">
-                {service.description}
-              </p>
+                {/* Content */}
+                <h3 className="font-display text-2xl font-bold text-text-primary mb-2 group-hover:text-gold-600 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gold-600 text-sm font-medium mb-4">
+                  {service.subtitle}
+                </p>
+                <p className="text-text-secondary leading-relaxed mb-6">
+                  {service.description}
+                </p>
 
-              {/* Learn More */}
-              <div className="flex items-center gap-2 text-gold-600 font-semibold">
-                <span>Explore Service</span>
-                <ArrowRight className="w-5 h-5" />
+                {/* Learn More */}
+                <div className="flex items-center gap-2 text-gold-600 font-semibold">
+                  <span>Explore Service</span>
+                  <ArrowRight className="w-5 h-5" />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services-detail" className="py-24 lg:py-32 bg-black-900">
+      <section id="services-detail" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Service Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -71,11 +75,10 @@ const ServicesList = () => {
               <button
                 key={service.id}
                 onClick={() => setActiveService(index)}
-                className={`flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
-                  activeService === index
+                className={`flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition-all duration-300 ${activeService === index
                     ? 'bg-gradient-gold text-black-900 shadow-gold-lg'
                     : 'bg-black-800 text-ivory-300 border border-gold-500/30 hover:border-gold-500/50'
-                }`}
+                  }`}
               >
                 <span
                   className={
@@ -96,13 +99,13 @@ const ServicesList = () => {
               <span className="inline-block text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4">
                 Service {services[activeService].id} of 3
               </span>
-              <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-inverse mb-4 leading-tight">
+              <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-primary mb-4 leading-tight">
                 {services[activeService].title}
               </h2>
               <p className="text-gold-400 text-xl font-display italic mb-6">
                 {services[activeService].subtitle}
               </p>
-              <p className="text-ivory-300 text-lg leading-relaxed mb-6">
+              <p className="text-text-secondary text-lg leading-relaxed mb-6">
                 {services[activeService].description}
               </p>
               <p className="text-ivory-400 leading-relaxed mb-8">

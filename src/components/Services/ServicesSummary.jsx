@@ -1,9 +1,10 @@
 import React from 'react'
 import { serviceSummary } from '../../data/content'
+import SectionTitle from '../common/SectionTitle'
 
 function ServicesSummary() {
     return (
-        <section className="py-24 lg:py-32 bg-gradient-dark relative overflow-hidden">
+        <section className="py-24 lg:py-32 bg-bg-main relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div
@@ -21,10 +22,8 @@ function ServicesSummary() {
 
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="inline-block text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4">
-                        Complete Solutions
-                    </span>
-                    <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-inverse mb-6">
+                    <SectionTitle title="Complete Solutions" />
+                    <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-primary mb-6">
                         End-to-End{' '}
                         <span className="text-gradient">Property Development</span>
                     </h2>
@@ -38,7 +37,7 @@ function ServicesSummary() {
                     {serviceSummary.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-black-800/50 border border-gold-500/20 rounded-2xl p-6 hover:border-gold-500/50 hover:bg-black-800 transition-all duration-300 group"
+                            className="bg-black-800 border border-gold-500/20 rounded-2xl p-6 hover:border-gold-500/50 hover:bg-black-800/80 transition-all duration-300 group"
                         >
                             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                                 {item.icon}

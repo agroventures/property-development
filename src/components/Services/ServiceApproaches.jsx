@@ -1,14 +1,13 @@
 import React from 'react'
 import { approaches } from '../../data/content'
+import SectionTitle from '../common/SectionTitle'
 
 export default function ServiceApproaches() {
     return (
         <section className="py-24 lg:py-32 bg-bg-main">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="inline-block text-gold-500 font-semibold tracking-widest uppercase text-sm mb-4">
-                        Our Approach
-                    </span>
+                    <SectionTitle title="Our Approach" />
                     <h2 className="font-display text-3xl lg:text-5xl font-bold text-text-primary mb-6">
                         How We Deliver <span className="text-gold-500">Excellence</span>
                     </h2>

@@ -2,7 +2,7 @@ import { ArrowRight, Mail, MapPin, MessageCircleMore, Phone } from "lucide-react
 
 const ServicesCTA = () => {
   return (
-    <section className="py-24 lg:py-32 bg-bg-main">
+    <section className="py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-black-900 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
           {/* Decorative Elements */}
