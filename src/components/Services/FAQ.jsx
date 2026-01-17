@@ -1,32 +1,6 @@
 import React, { useState } from 'react'
 import { ChevronDown, HelpCircle } from 'lucide-react'
-
-const faqs = [
-  {
-    question: 'What services do you offer for first-time buyers?',
-    answer: 'We offer comprehensive support for first-time buyers including property search, mortgage guidance, legal assistance, and complete hand-holding through the entire buying process. Our experts will help you understand the market and make informed decisions.'
-  },
-  {
-    question: 'How long does the property buying process take?',
-    answer: 'The typical property buying process takes 4-8 weeks from offer acceptance to completion. However, this can vary based on factors like chain length, mortgage approval, and legal checks. We work to expedite this process wherever possible.'
-  },
-  {
-    question: 'Do you offer property management services?',
-    answer: 'Yes, we offer full property management services including tenant finding, rent collection, maintenance coordination, regular inspections, and financial reporting. Our management packages are flexible to suit your needs.'
-  },
-  {
-    question: 'What are your fees for selling a property?',
-    answer: 'Our selling fees are competitive and transparent. We typically charge between 1-2% of the final sale price, depending on the property value and services required. Contact us for a personalized quote based on your property.'
-  },
-  {
-    question: 'Can you help with commercial properties?',
-    answer: 'Absolutely! We have a dedicated commercial property team that handles office spaces, retail units, warehouses, and investment properties. We offer buying, selling, leasing, and management services for commercial real estate.'
-  },
-  {
-    question: 'Do you provide valuation services?',
-    answer: 'Yes, we provide professional property valuations for various purposes including sales, purchases, remortgaging, and insurance. Our RICS-certified valuers ensure accurate and reliable assessments.'
-  }
-]
+import { faqs } from '../../data/content'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0)

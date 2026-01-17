@@ -1,4 +1,5 @@
 import React from 'react'
+import { serviceSummary } from '../../data/content'
 
 function ServicesSummary() {
     return (
@@ -34,38 +35,7 @@ function ServicesSummary() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {[
-                        {
-                            icon: '🔍',
-                            title: 'Site Selection',
-                            desc: 'Strategic identification of high-potential land parcels.',
-                        },
-                        {
-                            icon: '📐',
-                            title: 'Master Planning',
-                            desc: 'Comprehensive planning for optimal land utilization.',
-                        },
-                        {
-                            icon: '🏛️',
-                            title: 'Architectural Design',
-                            desc: 'Innovative designs that blend form and function.',
-                        },
-                        {
-                            icon: '🌿',
-                            title: 'Sustainable Development',
-                            desc: 'Eco-friendly practices integrated at every stage.',
-                        },
-                        {
-                            icon: '🔨',
-                            title: 'Quality Construction',
-                            desc: 'Premium materials and expert craftsmanship.',
-                        },
-                        {
-                            icon: '🤝',
-                            title: 'Client Support',
-                            desc: 'Dedicated support from inquiry to handover.',
-                        },
-                    ].map((item, index) => (
+                    {serviceSummary.map((item, index) => (
                         <div
                             key={index}
                             className="bg-black-800/50 border border-gold-500/20 rounded-2xl p-6 hover:border-gold-500/50 hover:bg-black-800 transition-all duration-300 group"

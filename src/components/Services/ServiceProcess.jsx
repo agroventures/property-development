@@ -1,5 +1,6 @@
 import React from 'react'
 import { Search, FileCheck, MessageSquare, Key, CheckCircle2 } from 'lucide-react'
+import { process } from '../../data/content'
 
 const ServiceProcess = () => {
   return (
@@ -22,28 +23,7 @@ const ServiceProcess = () => {
             </p>
 
             <div className="space-y-6">
-              {[
-                {
-                  step: '01',
-                  title: 'Consultation & Planning',
-                  desc: 'Understanding your vision, requirements, and investment goals.',
-                },
-                {
-                  step: '02',
-                  title: 'Site Analysis & Design',
-                  desc: 'Comprehensive site evaluation and architectural concept development.',
-                },
-                {
-                  step: '03',
-                  title: 'Development & Construction',
-                  desc: 'Expert execution with quality materials and sustainable practices.',
-                },
-                {
-                  step: '04',
-                  title: 'Handover & Support',
-                  desc: 'Seamless property handover with ongoing after-sales support.',
-                },
-              ].map((item, index) => (
+              {process.map((item, index) => (
                 <div
                   key={index}
                   className="flex gap-4 group cursor-pointer"

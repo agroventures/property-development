@@ -152,28 +152,323 @@ export const vision = ['Global market leadership', 'Innovation in real estate', 
 // Values
 export const values = [
     {
-      icon: <Shield />,
-      title: 'Integrity',
-      description: 'The foundation of every decision we make.',
+        icon: <Shield />,
+        title: 'Integrity',
+        description: 'The foundation of every decision we make.',
     },
     {
-      icon: <Globe />,
-      title: 'Innovation',
-      description: 'Constantly redefining modern real estate through smart and sustainable design.',
+        icon: <Globe />,
+        title: 'Innovation',
+        description: 'Constantly redefining modern real estate through smart and sustainable design.',
     },
     {
-      icon: <Recycle />,
-      title: 'Sustainability',
-      description: ' Respecting the land, conserving resources, and minimizing our footprint.',
+        icon: <Recycle />,
+        title: 'Sustainability',
+        description: ' Respecting the land, conserving resources, and minimizing our footprint.',
     },
     {
-      icon: <Award />,
-      title: 'Excellence',
-      description: 'Delivering unmatched quality and service in every project.',
+        icon: <Award />,
+        title: 'Excellence',
+        description: 'Delivering unmatched quality and service in every project.',
     },
     {
-      icon: <Group />,
-      title: 'Community',
-      description: 'Creating developments that foster human connection and well-being.',
+        icon: <Group />,
+        title: 'Community',
+        description: 'Creating developments that foster human connection and well-being.',
     }
-  ];
+];
+
+// FAQS
+export const faqs = [
+    {
+        question: 'What services do you offer for first-time buyers?',
+        answer: 'We offer comprehensive support for first-time buyers including property search, mortgage guidance, legal assistance, and complete hand-holding through the entire buying process. Our experts will help you understand the market and make informed decisions.'
+    },
+    {
+        question: 'How long does the property buying process take?',
+        answer: 'The typical property buying process takes 4-8 weeks from offer acceptance to completion. However, this can vary based on factors like chain length, mortgage approval, and legal checks. We work to expedite this process wherever possible.'
+    },
+    {
+        question: 'Do you offer property management services?',
+        answer: 'Yes, we offer full property management services including tenant finding, rent collection, maintenance coordination, regular inspections, and financial reporting. Our management packages are flexible to suit your needs.'
+    },
+    {
+        question: 'What are your fees for selling a property?',
+        answer: 'Our selling fees are competitive and transparent. We typically charge between 1-2% of the final sale price, depending on the property value and services required. Contact us for a personalized quote based on your property.'
+    },
+    {
+        question: 'Can you help with commercial properties?',
+        answer: 'Absolutely! We have a dedicated commercial property team that handles office spaces, retail units, warehouses, and investment properties. We offer buying, selling, leasing, and management services for commercial real estate.'
+    },
+    {
+        question: 'Do you provide valuation services?',
+        answer: 'Yes, we provide professional property valuations for various purposes including sales, purchases, remortgaging, and insurance. Our RICS-certified valuers ensure accurate and reliable assessments.'
+    }
+]
+
+// Approaches
+export const approaches = [
+    {
+        icon: (
+            <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+            </svg>
+        ),
+        title: 'Market Research & Feasibility',
+        description:
+            'Comprehensive market research and feasibility analysis to ensure every project is positioned for success.',
+    },
+    {
+        icon: (
+            <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+            </svg>
+        ),
+        title: 'Environmental Planning',
+        description:
+            'Environmentally sensitive land and infrastructure planning that preserves natural beauty.',
+    },
+    {
+        icon: (
+            <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+            </svg>
+        ),
+        title: 'Expert Partnerships',
+        description:
+            'Strong partnerships with leading architects, engineers, and sustainability consultants.',
+    },
+    {
+        icon: (
+            <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+            </svg>
+        ),
+        title: 'Client-Focused Practices',
+        description:
+            'Transparent and client-focused development practices that prioritize your vision and investment.',
+    },
+];
+
+// Service Process
+export const process = [
+    {
+        step: '01',
+        title: 'Consultation & Planning',
+        desc: 'Understanding your vision, requirements, and investment goals.',
+    },
+    {
+        step: '02',
+        title: 'Site Analysis & Design',
+        desc: 'Comprehensive site evaluation and architectural concept development.',
+    },
+    {
+        step: '03',
+        title: 'Development & Construction',
+        desc: 'Expert execution with quality materials and sustainable practices.',
+    },
+    {
+        step: '04',
+        title: 'Handover & Support',
+        desc: 'Seamless property handover with ongoing after-sales support.',
+    },
+]
+
+
+// Services
+export const services = [
+    {
+        id: 1,
+        title: 'Land Development',
+        subtitle: 'Transforming Land into Legacy',
+        description:
+            'We specialize in identifying and transforming strategically located land into premium, investment-ready plots and sustainable residential communities.',
+        details:
+            'Our development process integrates modern infrastructure planning, green landscaping, and long-term land value appreciation.',
+        icon: (
+            <svg
+                className="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                />
+            </svg>
+        ),
+        features: [
+            'Strategic location identification',
+            'Infrastructure planning & development',
+            'Green landscaping integration',
+            'Investment-ready plot creation',
+            'Community masterplanning',
+            'Utility & road network development',
+        ],
+        project: {
+            name: 'Green Valley Estate',
+            location: 'Melsiripura',
+            description:
+                'A sustainable mixed-use land development combining residential, agricultural, and leisure spaces for a balanced lifestyle.',
+            status: 'Ongoing',
+            highlights: ['50+ Acres', 'Mixed-Use Development', 'Organic Living'],
+        },
+    },
+    {
+        id: 2,
+        title: 'Residential Construction',
+        subtitle: 'Building Dreams into Reality',
+        description:
+            'We design and build homes that embody luxury, functionality, and environmental harmony. Every project reflects architectural sophistication, smart living, and enduring craftsmanship.',
+        details:
+            'From contemporary villas to premium housing estates, our residential developments set new standards in modern living while respecting traditional values.',
+        icon: (
+            <svg
+                className="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+            </svg>
+        ),
+        features: [
+            'Architectural design excellence',
+            'Smart home integration',
+            'Sustainable building materials',
+            'Premium interior finishes',
+            'Energy-efficient systems',
+            'Landscaped surroundings',
+        ],
+        project: {
+            name: 'AgroHomes Enclave',
+            location: 'Kurunegala',
+            description:
+                'A curated collection of modern homes and serviced plots that offer residents a premium lifestyle within a natural, serene environment.',
+            status: 'Phase 2',
+            highlights: ['Premium Villas', 'Serviced Plots', 'Gated Community'],
+        },
+    },
+    {
+        id: 3,
+        title: 'Eco-Tourism Development',
+        subtitle: 'Where Nature Meets Luxury',
+        description:
+            'Our eco-tourism ventures merge real estate with sustainability, creating exclusive destinations where nature and comfort coexist beautifully.',
+        details:
+            'We design experiences that nurture the environment while offering unique hospitality value, setting new benchmarks in responsible tourism.',
+        icon: (
+            <svg
+                className="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+            </svg>
+        ),
+        features: [
+            'Sustainable architecture',
+            'Nature conservation integration',
+            'Wellness & retreat facilities',
+            'Eco-friendly operations',
+            'Local community engagement',
+            'Unique guest experiences',
+        ],
+        project: {
+            name: 'The Nature Retreat',
+            location: 'Matale',
+            description:
+                'An eco-luxury retreat that integrates conservation, wellness, and sustainable architecture in one breathtaking destination.',
+            status: 'Coming Soon',
+            highlights: ['Eco-Luxury', 'Wellness Center', 'Conservation Focus'],
+        },
+    },
+];
+
+// Service Summary
+export const serviceSummary = [
+    {
+        icon: '🔍',
+        title: 'Site Selection',
+        desc: 'Strategic identification of high-potential land parcels.',
+    },
+    {
+        icon: '📐',
+        title: 'Master Planning',
+        desc: 'Comprehensive planning for optimal land utilization.',
+    },
+    {
+        icon: '🏛️',
+        title: 'Architectural Design',
+        desc: 'Innovative designs that blend form and function.',
+    },
+    {
+        icon: '🌿',
+        title: 'Sustainable Development',
+        desc: 'Eco-friendly practices integrated at every stage.',
+    },
+    {
+        icon: '🔨',
+        title: 'Quality Construction',
+        desc: 'Premium materials and expert craftsmanship.',
+    },
+    {
+        icon: '🤝',
+        title: 'Client Support',
+        desc: 'Dedicated support from inquiry to handover.',
+    },
+]

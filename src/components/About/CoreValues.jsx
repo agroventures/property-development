@@ -21,7 +21,7 @@ const CoreValues = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="group bg-primary-50 hover:bg-linear-to-br hover:from-primary-500 hover:to-primary-600 rounded-3xl p-8 transition-all duration-300 cursor-pointer"
+              className="group bg-white hover:bg-white/65 rounded-3xl p-8 transition-all duration-300 cursor-pointer"
             >
               <div className="w-16 h-16 bg-white group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 text-primary-600 group-hover:text-gold-500 shadow-lg transition-all">
                 {value.icon}

@@ -90,7 +90,7 @@ const Header = () => {
                                 <Link
                                     key={item.id}
                                     to={item.url}
-                                    className="block py-3 text-gold-950 hover:text-gold-500 transition-colors border-b border-gold-900/30 last:border-0"
+                                    className="block py-3 text-gold-500 hover:text-white transition-colors border-b border-gold-900/30 last:border-0"
                                 >
                                     {item.name}
                                 </Link>
