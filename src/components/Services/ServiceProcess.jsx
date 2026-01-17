@@ -48,7 +48,7 @@ const ServiceProcess = () => {
                   key={index}
                   className="flex gap-4 group cursor-pointer"
                 >
-                  <div className="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold-500 transition-all duration-300">
+                  <div className="w-14 h-14 bg-gold-500/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-gold-500 transition-all duration-300">
                     <span className="font-display text-xl font-bold text-gold-600 group-hover:text-black-900 transition-colors">
                       {item.step}
                     </span>

@@ -9,8 +9,8 @@ import Properties from './pages/Properties'
 import Loader from './components/common/Loader'
 import NotFound from './components/NotFound'
 import ScrollToTop from './components/ScrollToTop'
-import TermsOfService from './pages/termsOfService'
-import PrivacyPolicy from './pages/privacyPolicy'
+import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
   const [loading, setLoading] = useState(true)
