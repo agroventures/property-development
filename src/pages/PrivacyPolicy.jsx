@@ -4,10 +4,10 @@ import Footer from '../components/common/Footer'
 
 function PrivacyPolicy() {
   return (
-    <div className="min-h-screen">
-        <Header />
+    <div className='min-h-screen'>
+      <Header />
 
-        <Footer />
+      <Footer />
     </div>
   )
 }

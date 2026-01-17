@@ -4,10 +4,10 @@ import Footer from '../components/common/Footer'
 
 function TermsOfService() {
   return (
-    <div className="min-h-screen">
-        <Header />
+    <div className='min-h-screen'>
+      <Header />
 
-        <Footer />
+      <Footer />
     </div>
   )
 }
