@@ -87,7 +87,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="mt-16 pt-8 border-t border-gold-500/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-ivory-400 text-sm">
-              © 2024 Agroventures Property Development (Pvt) Ltd. All rights reserved. Developed by{" "}
+              © {new Date().getFullYear()} Agroventures Property Development (Pvt) Ltd. All rights reserved. Developed by{" "}
             <a
               href="https://ventrax.lk"
               target="_blank"
