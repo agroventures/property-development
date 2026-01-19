@@ -40,9 +40,9 @@ const ContactSection = () => {
     return (
         <section className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-3 gap-12">
+                <div className="flex flex-col gap-8">
                     {/* Contact Information */}
-                    <div className="lg:col-span-1">
+                    {/* <div className="lg:col-span-1">
                         <div className="sticky top-24">
                             <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
                                 Contact Information
@@ -55,7 +55,6 @@ const ContactSection = () => {
                                 or need expert real estate advice, we're just a message away.
                             </p>
 
-                            {/* Contact Cards */}
                             <div className="space-y-4">
                                 {contactInfo.map((item, index) => (
                                     <div 
@@ -75,7 +74,6 @@ const ContactSection = () => {
                                 ))}
                             </div>
 
-                            {/* Social Links */}
                             <div className="mt-8">
                                 <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
                                 <div className="flex gap-3">
@@ -93,7 +91,7 @@ const ContactSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Contact Form */}
                     <div className="lg:col-span-2">
