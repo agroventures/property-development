@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from "/logo.png";
 
 const Loader = () => {
+  useEffect(() => {
+    document.title = 'Agro Ventures Property Developement';
+  })
+
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gold-500/50">
       <div className="relative flex items-center justify-center">
@@ -11,9 +15,9 @@ const Loader = () => {
 
         {/* The Pulsing Logo */}
         <div className="relative w-30 h-30 animate-pulse">
-          <img 
-            src={logo} 
-            alt="Loading..." 
+          <img
+            src={logo}
+            alt="Loading..."
             className="w-full h-full object-contain filter grayscale brightness-50"
           />
         </div>

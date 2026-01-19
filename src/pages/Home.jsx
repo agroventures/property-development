@@ -9,8 +9,18 @@ import HomeAbout from '../components/Home/HomeAbout'
 import DefineUs from '../components/Home/DefineUs'
 import WhyChooseUs from '../components/common/WhyChooseUs'
 import OurPromise from '../components/Home/OurPromise'
+import useSEO from '../hooks/useSEO'
 
 function Home() {
+  const url = window.location.href;
+
+  useSEO({
+    title: "Home - Agro Ventures Property Development",
+    url,
+    image_alt: "Home",
+    twitter_card: "summary_large_image",
+  });
+
   return (
     <div className="min-h-screen">
       <Header />

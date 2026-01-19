@@ -109,10 +109,9 @@ export const features = [
 
 // Social Links
 export const socialLinks = [
-    { url: 'https://facebook.com/agroventurespropertydevelopment', icon: <Facebook size={20} /> },
-    { url: 'https://www.instagram.com/agroventurespropertydevelopment/', icon: <Instagram size={20} /> },
-    { url: 'https://www.linkedin.com/company/agroventures-property-development', icon: <Linkedin size={20} /> },
-    { url: 'https://www.youtube.com/@AgroVenturesPropertyDevelopment', icon: <Youtube size={20} /> },
+    { url: 'https://www.facebook.com/agroventurespropertydevelopment/', icon: <Facebook size={20} /> },
+    { url: 'https://www.instagram.com/agroventuresproperty/', icon: <Instagram size={20} /> },
+    { url: 'https://www.linkedin.com/company/agro-ventures-property-development/', icon: <Linkedin size={20} /> },
 ];
 
 // Contact Info
@@ -138,7 +137,7 @@ export const contactInfo = [
     {
         icon: Clock,
         title: 'Business Hours',
-        details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
+        details: ['Mon - Fri: 8:30 AM - 5:00 PM', 'Sat: 8.30 AM - 12:30 PM'],
         color: 'bg-orange-50 text-orange-600'
     }
 ]
@@ -340,6 +339,7 @@ export const services = [
                 />
             </svg>
         ),
+        image: "https://images.pexels.com/photos/2314021/pexels-photo-2314021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         features: [
             'Strategic location identification',
             'Infrastructure planning & development',
@@ -380,6 +380,7 @@ export const services = [
                 />
             </svg>
         ),
+        image: "https://images.pexels.com/photos/11827595/pexels-photo-11827595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         features: [
             'Architectural design excellence',
             'Smart home integration',
@@ -420,6 +421,7 @@ export const services = [
                 />
             </svg>
         ),
+        image: "https://images.pexels.com/photos/1110656/pexels-photo-1110656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         features: [
             'Sustainable architecture',
             'Nature conservation integration',

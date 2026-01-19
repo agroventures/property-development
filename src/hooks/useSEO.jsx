@@ -17,7 +17,8 @@ const setMeta = (attr, key, content) => {
 const useSEO = ({
   // Basic
   title,
-  description,
+  description = "Discover premium land for sale and high-yield property investment opportunities with Agroventures Property Development. Specializing in residential plots and sustainable land projects across Sri Lanka.",
+  keywords = "Agroventures Property Development, land for sale Sri Lanka, buy land Matale, residential plots Sri Lanka, property investment Sri Lanka, real estate developers Sri Lanka, land sale Kurunegala, affordable land Sri Lanka",
 
   // Open Graph
   locale = "en_US",
@@ -44,6 +45,11 @@ const useSEO = ({
     // Meta description
     if (description) {
       setMeta("name", "description", description);
+    }
+
+    // Meta keywords
+    if (keywords) {
+      setMeta("name", "keywords", keywords);
     }
 
     // Open Graph

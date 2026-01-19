@@ -28,11 +28,22 @@ const Header = () => {
                     {/* Logo */}
                     <div className="flex items-center gap-3">
                         <Link to='/'>
-                            <img
-                                src="/logo.png"
-                                alt="Logo"
-                                className="h-12"
-                            /></Link>
+                            {
+                                isScrolled ? (
+                                    <img
+                                        src="/logo.png"
+                                        alt="Logo"
+                                        className="h-12"
+                                    />
+                                ) : (
+                                    <img
+                                        src="/logo.png"
+                                        alt="Logo"
+                                        className="h-12 brightness-0 invert"
+                                    />
+                                )
+                            }
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation */}

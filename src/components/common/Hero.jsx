@@ -1,11 +1,6 @@
-import { LocateIcon, Search } from 'lucide-react';
-import React, { useState } from 'react';
-
 const Hero = ({ page, pageTitle, img, imgAlt, badgeText, title, highlightedText, description }) => {
-    const [activeTab, setActiveTab] = useState('buy');
-
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
             {/* Background Layer */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -15,10 +10,6 @@ const Hero = ({ page, pageTitle, img, imgAlt, badgeText, title, highlightedText,
                 />
                 {/* Luxury Overlay: Darker gradient for better text readability */}
                 <div className="absolute inset-0 bg-linear-to-r from-black-900/60 via-black-900/50 to-black-900/40"></div>
-                
-                {/* Subtle Brand Glows */}
-                <div className="absolute top-20 right-20 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 left-20 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
             </div>
 
             {/* Content Layer */}
@@ -59,12 +50,10 @@ const Hero = ({ page, pageTitle, img, imgAlt, badgeText, title, highlightedText,
             </div>
 
             {/* Scroll Indicator */}
-            {page === 'home' && (
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2">
                     <span className="text-[10px] text-gold-500 font-bold uppercase tracking-[0.3em]">Discover</span>
                     <div className="w-px h-12 bg-linear-to-b from-gold-500 to-transparent"></div>
                 </div>
-            )}
         </section>
     );
 };
