@@ -71,7 +71,7 @@ const TeamSection = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-primary-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 {/* Social Links */}
-                <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                {/* <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                   <a href="#" className="w-10 h-10 bg-white/90 hover:bg-primary-500 rounded-full flex items-center justify-center text-primary-950 hover:text-white transition-colors">
                     <Linkedin size={20} />
                   </a>
@@ -81,7 +81,7 @@ const TeamSection = () => {
                   <a href="#" className="w-10 h-10 bg-white/90 hover:bg-primary-500 rounded-full flex items-center justify-center text-primary-950 hover:text-white transition-colors">
                     <Mail size={20} />
                   </a>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
