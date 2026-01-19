@@ -62,6 +62,7 @@ const CTA = () => {
                 ))}
               </div>
 
+              
               {/* Social Links */}
               <div className="flex gap-4 mt-6 pt-6 border-t border-gold-500/20">
                 {socialLinks.map(
