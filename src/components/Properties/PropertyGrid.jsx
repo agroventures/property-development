@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { properties } from '../../data/properties'
 import PropertyCard from '../common/PropertyCard'
-import PropertyModal from '../common/PropertyModal'
 import PropertyFilters from './PropertyFilters'
+import { properties } from '../../data/properties'
 
 const PropertyGrid = () => {
     const [currentPage, setCurrentPage] = useState(1)
-    const [selectedProperty, setSelectedProperty] = useState(null);
 
     const [filters, setFilters] = useState({ status: 'all', location: 'all', tag: 'all' });
 
@@ -45,7 +43,6 @@ const PropertyGrid = () => {
                         <PropertyCard
                             key={property.id || index} 
                             property={property}
-                            onExplore={() => setSelectedProperty(property)}
                         />
                     ))}
                 </div>
@@ -103,12 +100,6 @@ const PropertyGrid = () => {
                     </div>
                 )}
             </div>
-
-            <PropertyModal 
-                property={selectedProperty} 
-                isOpen={!!selectedProperty} 
-                onClose={() => setSelectedProperty(null)} 
-            />
         </section>
         </>
     )

@@ -11,6 +11,7 @@ import NotFound from './components/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import PropertyDetails from './pages/PropertyDetails'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -37,6 +38,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/properties' element={<Properties />} />
+          <Route path='/properties/:slug' element={<PropertyDetails />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/terms' element={<TermsOfService />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />

@@ -1,16 +1,11 @@
 import React, { useState, useMemo } from 'react'
 import { 
-    SlidersHorizontal, 
-    Grid3X3, 
-    List, 
     ChevronDown,
     X,
     MapPin,
-    Tag,
-    Maximize
+    Tag
 } from 'lucide-react'
 import { properties } from '../../data/properties'
-
 
 const PropertyFilters = ({ onFilterChange }) => {
     const [viewMode, setViewMode] = useState('grid')

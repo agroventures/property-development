@@ -52,7 +52,7 @@ const Footer = () => {
                 {properties.map((link, index) => (
                   <li key={index}>
                     <a
-                      href='/properties'
+                      href={`/properties/${link.slug}`}
                       className="text-ivory-400 hover:text-gold-500 transition-colors text-sm"
                     >
                       {link.title}

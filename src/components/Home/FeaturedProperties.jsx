@@ -1,7 +1,7 @@
-import { properties } from '../../data/properties';
 import SectionTitle from '../common/SectionTitle';
 import PropertyCard from '../common/PropertyCard';
 import { useNavigate } from 'react-router-dom';
+import { properties } from '../../data/properties';
 
 const FeaturedProperties = () => {
   const navigate = useNavigate();

@@ -1,7 +1,11 @@
 import { ArrowRight, Image, MapPin } from 'lucide-react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const PropertyCard = ({ property, onExplore }) => {
+const PropertyCard = ({ property }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div
       className="group bg-white rounded-3xl overflow-hidden shadow-gold hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 border border-ivory-200"
@@ -45,7 +49,7 @@ const PropertyCard = ({ property, onExplore }) => {
           {property.description}
         </p>
 
-        <button onClick={onExplore} className="flex items-center gap-2 text-gold-600 font-bold text-sm uppercase tracking-widest group/btn border-b border-transparent hover:border-gold-500 transition-all pb-1">
+        <button onClick={() => navigate(`/properties/${property.slug}`)} className="flex items-center gap-2 text-gold-600 font-bold text-sm uppercase tracking-widest group/btn border-b border-transparent hover:border-gold-500 transition-all pb-1">
           Explore Detail
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
         </button>
