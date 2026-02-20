@@ -178,7 +178,7 @@ const PropertyDetails = () => {
 
           <PropertyTabs property={property} />
 
-          <PropertyGallery images={property.images} />
+          {property.images && property.images.length > 0 && <PropertyGallery images={property.images} />}
         </div>
 
         {/* RIGHT SIDEBAR */}
