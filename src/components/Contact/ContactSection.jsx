@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { 
     Phone, 
     Mail, 
@@ -9,6 +10,7 @@ import {
     CheckCircle
 } from 'lucide-react'
 import { contactInfo, socialLinks } from '../../data/content'
+import toast from 'react-hot-toast'
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -21,6 +23,8 @@ const ContactSection = () => {
         message: ''
     })
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [errors, setErrors] = useState({})
 
     const handleChange = (e) => {
         setFormData({
@@ -29,12 +33,50 @@ const ContactSection = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        // Handle form submission
-        console.log(formData)
-        setIsSubmitted(true)
-        setTimeout(() => setIsSubmitted(false), 3000)
+        const newErrors = {}
+
+        if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
+        if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
+        if (!formData.email.trim()) newErrors.email = 'Email is required'
+        if (!formData.subject) newErrors.subject = 'Subject is required'
+        if (!formData.message.trim()) newErrors.message = 'Message is required'
+
+        setErrors(newErrors)
+        if (Object.keys(newErrors).length === 0) {
+            setIsSubmitting(true)
+            try {
+                await emailjs.send(
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                    {
+                        from_name: `${formData.firstName} ${formData.lastName}`,
+                        email: formData.email,
+                        phone: formData.phone,
+                        subject: formData.subject,
+                        property_type: formData.propertyType,
+                        message: formData.message
+                    },
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                )
+                setIsSubmitted(true)
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    propertyType: '',
+                    message: ''
+                })
+                setTimeout(() => setIsSubmitted(false), 3000)
+            } catch (error) {
+                toast.error('Failed to send message. Please try again.')
+            } finally {
+                setIsSubmitting(false)
+            }
+        }
     }
 
     return (
@@ -134,6 +176,7 @@ const ContactSection = () => {
                                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
                                                     placeholder="John"
                                                 />
+                                                {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                                             </div>
                                         </div>
                                         <div>
@@ -151,6 +194,7 @@ const ContactSection = () => {
                                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
                                                     placeholder="Doe"
                                                 />
+                                                {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                                             </div>
                                         </div>
                                     </div>
@@ -172,6 +216,7 @@ const ContactSection = () => {
                                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
                                                     placeholder="john@example.com"
                                                 />
+                                                {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                                             </div>
                                         </div>
                                         <div>
@@ -213,6 +258,7 @@ const ContactSection = () => {
                                                 <option value="valuation">Property Valuation</option>
                                                 <option value="general">General Inquiry</option>
                                             </select>
+                                            {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
                                         </div>
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -253,6 +299,7 @@ const ContactSection = () => {
                                                 className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none"
                                                 placeholder="Tell us about your requirements, preferred locations, budget, or any questions you have..."
                                             />
+                                            {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                                         </div>
                                     </div>
 
@@ -275,10 +322,11 @@ const ContactSection = () => {
                                     {/* Submit Button */}
                                     <button
                                         type="submit"
-                                        className="w-full inline-flex items-center justify-center gap-2 bg-bg-dark hover:bg-bg-dark/80 text-white py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                        disabled={isSubmitting}
+                                        className="w-full inline-flex items-center justify-center gap-2 bg-bg-dark hover:bg-bg-dark/80 text-white py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         <Send className="w-5 h-5" />
-                                        Send Message
+                                        {isSubmitting ? 'Sending...' : 'Send Message'}
                                     </button>
                                 </form>
                             )}

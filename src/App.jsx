@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop'
 import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import PropertyDetails from './pages/PropertyDetails'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Toaster position="top-right" reverseOrder={false} />
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />

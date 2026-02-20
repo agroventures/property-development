@@ -55,7 +55,7 @@ const ContactMap = () => {
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Contact</h3>
                                 <p className="text-gray-600">
-                                    Phone: +94 77 123 4567<br />
+                                    Phone: +94 77 064 7916<br />
                                 </p>
                             </div>
 

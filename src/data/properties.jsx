@@ -5,6 +5,7 @@ export const properties = [
         title: 'Eden Grove Athurugiriya',
         slug: 'eden-grove-athurugiriya',
         logo: "/images/property/athurugiriya/athurugiriya.png",
+        phone: "0770647916",
         location: 'Athurugiriya',
         type: 'Residential',
         description:
@@ -35,7 +36,7 @@ export const properties = [
         ],
         map: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2436.8322010417724!2d79.98582877781323!3d6.912194573234641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2slk!4v1771568141588!5m2!1sen!2slk",
         roadMap: "",
-        blockingOutPlan: "/images/property/blocking-out-plan/athurugiriya/athurugiriya.jpeg",
+        blockingOutPlan: "/images/property/athurugiriya/blocking-out-plan.jpeg",
         view360: 'https://www.google.com/maps/embed?pb=!4v1771567558477!6m8!1m7!1snoz9yj0qbEVeW0SIOVi9nA!2m2!1d6.912269129222116!2d79.98560883667399!3f61.38239626011414!4f-10.406628709631676!5f0.7820865974627469',
         tag: 'Land Development',
         status: 'Ongoing',
@@ -47,10 +48,12 @@ export const properties = [
             { id: 5, src: "/images/property/athurugiriya/5.jpeg", title: "Athurugiriya-5" },
         ],
     },
+
     {
         title: 'Eden Grove Kalutara',
         slug: 'eden-grove-kalutara',
         logo: "/images/property/kalutara/kalutara.png",
+        phone: "0770647916",
         location: 'Kalutara',
         type: 'Residential',
         description:
@@ -81,7 +84,7 @@ export const properties = [
         ],
         map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d609.6503460521496!2d80.03117111208226!3d6.560137392799484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2338b4fef93f1%3A0xdd7ee5b01ebd2c68!2sKadanagoda%20Road!5e1!3m2!1sen!2slk!4v1771572182742!5m2!1sen!2slk",
         roadMap: "",
-        blockingOutPlan: "/images/property/blocking-out-plan/kalutara/kalutara.jpeg",
+        blockingOutPlan: "/images/property/kalutara/blocking-out-plan.jpeg",
         view360: 'https://www.google.com/maps/embed?pb=!4v1771570516254!6m8!1m7!1suTQuA_O76H47_frJndapjg!2m2!1d6.560137392799484!2d80.03117111208226!3f239.28618439722425!4f-24.47341889608468!5f0.7820865974627469',
         tag: 'Land Development',
         status: 'Ongoing',

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import {
   MapPin,
   CheckCircle,
@@ -10,10 +11,53 @@ import Footer from "../components/common/Footer";
 import PropertyTabs from "../components/PropertyDetails.jsx/PropertyTabs";
 import { properties } from "../data/properties";
 import PropertyGallery from "../components/PropertyDetails.jsx/PropertyGallery";
+import toast from "react-hot-toast";
 
 const PropertyDetails = () => {
   const slug = window.location.pathname.split("/").pop();
   const property = properties.find((p) => p.slug === slug);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
+    else if (!/^[0-9]{10}$/.test(formData.phone.replace(/\s/g, ''))) newErrors.phone = 'Invalid phone number';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      setIsSubmitting(true);
+      try {
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: formData.name,
+            phone: formData.phone,
+            message: formData.message,
+            property: property.title
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
+        toast.success('Inquiry sent successfully!');
+        setFormData({ name: '', phone: '', message: '' });
+      } catch (error) {
+        toast.error('Failed to send inquiry. Please try again.');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+  };
 
   if (!property) {
     return (
@@ -35,7 +79,7 @@ const PropertyDetails = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black-900/70 flex flex-col justify-center px-8 md:px-24">
+        <div className="absolute inset-0 bg-black-900/70 flex flex-col justify-end px-8 md:px-24 pb-12">
           <span className="bg-gradient-gold text-black-900 px-4 py-1 rounded-full w-fit text-sm font-bold mb-6 uppercase tracking-widest shadow-gold">
             {property.type}
           </span>
@@ -144,15 +188,18 @@ const PropertyDetails = () => {
               Inquire About This Land
             </h3>
 
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-sm font-semibold text-black-800 mb-2">
                   Full Name
                 </label>
                 <input
                   type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-ivory-100 border border-border-muted focus:ring-2 focus:ring-gold-500 outline-none"
                 />
+                {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
               </div>
 
               <div>
@@ -161,8 +208,11 @@ const PropertyDetails = () => {
                 </label>
                 <input
                   type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-ivory-100 border border-border-muted focus:ring-2 focus:ring-gold-500 outline-none"
                 />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
               </div>
 
               <div>
@@ -171,13 +221,15 @@ const PropertyDetails = () => {
                 </label>
                 <textarea
                   rows="4"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-ivory-100 border border-border-muted focus:ring-2 focus:ring-gold-500 outline-none"
-                  defaultValue={`I'm interested in ${property.title}...`}
                 />
+                {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
               </div>
 
-              <button className="w-full bg-gradient-gold text-black-900 font-bold py-4 rounded-xl shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 transition-all duration-300">
-                SEND INQUIRY
+              <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-gold text-black-900 font-bold py-4 rounded-xl shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                {isSubmitting ? 'SENDING...' : 'SEND INQUIRY'}
               </button>
             </form>
 
@@ -186,11 +238,11 @@ const PropertyDetails = () => {
                 Need immediate help?
               </p>
               <a
-                href="tel:0777771045"
+                href={`tel:${property.phone}`}
                 className="text-2xl font-display font-bold text-black-800 flex items-center justify-center gap-3 hover:text-gold-600 transition-colors"
               >
                 <Phone className="text-gold-500" size={20} />
-                0777 771 045
+                {property.phone}
               </a>
             </div>
           </div>

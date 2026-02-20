@@ -62,12 +62,12 @@ const PropertyTabs = ({ property }) => {
                 {activeTab === "roadmap" && (
                     <div className="animate-fade-in flex flex-col items-center">
                         <img
-                            src="https://www.araliyalands.com/storage/lands/la-roma-homagama/road_map.jpg"
+                            src={property.roadMap}
                             alt="Road Map"
                             className="max-h-125 w-auto rounded-2xl shadow-gold"
                         />
                         <p className="mt-5 text-text-secondary text-sm">
-                            Main access routes to La' Roma Homagama
+                            Main access routes to the property
                         </p>
                     </div>
                 )}
