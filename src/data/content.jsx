@@ -119,7 +119,7 @@ export const contactInfo = [
     {
         icon: Phone,
         title: 'Phone',
-        details: ['+94 77 123 4567'],
+        details: ['+94 77 064 7916'],
         color: 'bg-blue-50 text-blue-600'
     },
     {
