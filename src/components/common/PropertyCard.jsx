@@ -13,18 +13,20 @@ const PropertyCard = ({ property }) => {
       {/* Image Placeholder */}
       <div className="relative h-64 bg-linear-to-br from-ivory-200 via-ivory-100 to-gold-100 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-24 h-24 border-2 border-gold-500/30 rounded-full flex items-center justify-center">
-            <Image />
-          </div>
+          <img
+            src={property.logo}
+            alt={property.title}
+            className="w-full h-full object-cover"
+          />
         </div>
-        
+
         {/* Status Badge */}
         <div className="absolute top-4 left-4">
           <span className="bg-gold-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
             {property.status}
           </span>
         </div>
-        
+
         {/* Tag */}
         <div className="absolute top-4 right-4">
           <span className="bg-black-900/80 backdrop-blur-md text-ivory-100 px-4 py-1.5 rounded-full text-xs font-medium border border-gold-500/20">
