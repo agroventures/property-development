@@ -30,10 +30,10 @@ const PropertyGallery = ( { images } ) => {
       </div>
 
       {/* Modern Grid Gallery */}
-      <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-150">
+      <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-150">
         
         {/* Featured Large Image */}
-        <div onClick={() => openModal(0)} className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg">
+        <div onClick={() => openModal(0)} className="col-span-2 md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg h-64 md:h-auto">
           <img 
             src={images[0].src} 
             alt={images[0].title}
@@ -48,8 +48,8 @@ const PropertyGallery = ( { images } ) => {
         </div>
 
         {/* Secondary Images */}
-        {images.slice(1, 5).map((img, index) => (
-          <div key={img.id} onClick={() => openModal(index + 1)} className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-md">
+        {images.slice(1).map((img, index) => (
+          <div key={img.id} onClick={() => openModal(index + 1)} className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-md h-48 md:h-auto">
             <img 
               src={img.src} 
               alt={img.title}
