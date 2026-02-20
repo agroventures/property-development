@@ -61,28 +61,34 @@ const PropertyTabs = ({ property }) => {
                 {/* ROAD MAP */}
                 {activeTab === "roadmap" && (
                     <div className="animate-fade-in flex flex-col items-center">
-                        <img
-                            src={property.roadMap}
-                            alt="Road Map"
-                            className="max-h-125 w-auto rounded-2xl shadow-gold"
-                        />
-                        <p className="mt-5 text-text-secondary text-sm">
-                            Main access routes to the property
-                        </p>
+                        {
+                            property?.roadMap ? (
+                                <img
+                                    src={property.roadMap}
+                                    alt={property.title}
+                                    className="max-h-150 w-auto rounded-2xl shadow-gold"
+                                />
+                            ) : (
+                                <p className="text-ivory-300">Road Map is not available</p>
+                            )
+                        }
                     </div>
                 )}
 
                 {/* BLOCKING PLAN */}
                 {activeTab === "blocking" && (
                     <div className="animate-fade-in flex flex-col items-center">
-                        <img
-                            src={property.blockingOutPlan}
-                            alt={property.title}
-                            className="max-h-150 w-auto rounded-2xl shadow-gold"
-                        />
-                        <p className="mt-5 text-text-secondary text-sm">
-                            Available lots and plot dimensions
-                        </p>
+                        {
+                            property?.blockingOutPlan ? (
+                                <img
+                                    src={property.blockingOutPlan}
+                                    alt={property.title}
+                                    className="max-h-150 w-auto rounded-2xl shadow-gold"
+                                />
+                            ) : (
+                                <p className="text-ivory-300">Blocking Plan is not available</p>
+                            )
+                        }
                     </div>
                 )}
 

@@ -4,7 +4,8 @@ import {
   MapPin,
   CheckCircle,
   Phone,
-  CreditCard
+  CreditCard,
+  DotIcon
 } from "lucide-react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
@@ -105,7 +106,14 @@ const PropertyDetails = () => {
             </h2>
 
             <div className="text-text-secondary leading-relaxed space-y-6 text-lg">
-              <p>{property.description}</p>
+              <ul className="space-y-5">
+              {property.description.map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <DotIcon className="text-gold-400 shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
                 {property.features.map((item, i) => (
@@ -156,24 +164,13 @@ const PropertyDetails = () => {
             </h3>
 
             <ul className="space-y-5">
-              {[
-                "Reserve your plot by paying Rs. 250,000/-",
-                "Pay 30% of the initial payment within 14 days.",
-                "Special discount available if full balance paid within a month.",
-                "Interest-free payment plans up to 12 months.",
-              ].map((item, i) => (
+              {property.payment.map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <CheckCircle className="text-gold-400 shrink-0 mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-
-            <div className="mt-10 pt-6 border-t border-gold-950/60">
-              <p className="text-ivory-300 italic">
-                We also assist in arranging bank loan facilities for a hassle-free process.
-              </p>
-            </div>
           </section>
 
           <PropertyTabs property={property} />
