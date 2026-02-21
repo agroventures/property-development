@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import SectionTitle from '../common/SectionTitle';
 
 const OurStory = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  // const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <section className="py-24 bg-bg-main">
@@ -44,14 +44,14 @@ const OurStory = () => {
               <div className="absolute inset-0 bg-primary-950/30"></div>
 
               {/* Play Button */}
-              <button
+              {/* <button
                 onClick={() => setIsVideoPlaying(true)}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110"
               >
                 <span className="text-primary-600 ml-1">
                   <Play />
                 </span>
-              </button>
+              </button> */}
             </div>
 
             {/* Floating Stats Card */}

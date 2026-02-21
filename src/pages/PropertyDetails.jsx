@@ -13,10 +13,20 @@ import PropertyTabs from "../components/PropertyDetails.jsx/PropertyTabs";
 import { properties } from "../data/properties";
 import PropertyGallery from "../components/PropertyDetails.jsx/PropertyGallery";
 import toast from "react-hot-toast";
+import useSEO from '../hooks/useSEO'
 
 const PropertyDetails = () => {
   const slug = window.location.pathname.split("/").pop();
   const property = properties.find((p) => p.slug === slug);
+
+  const url = window.location.href;
+
+  useSEO({
+    title: `${property.title} - Agro Ventures Property Development`,
+    url,
+    image_alt: `${property.title}`,
+    twitter_card: "summary_large_image",
+  });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -107,13 +117,13 @@ const PropertyDetails = () => {
 
             <div className="text-text-secondary leading-relaxed space-y-6 text-lg">
               <ul className="space-y-5">
-              {property.description.map((item, i) => (
-                <li key={i} className="flex gap-3">
-                  <DotIcon className="text-gold-400 shrink-0 mt-1" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+                {property.description.map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <DotIcon className="text-gold-400 shrink-0 mt-1" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
                 {property.features.map((item, i) => (
