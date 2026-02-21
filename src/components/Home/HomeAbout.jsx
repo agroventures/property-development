@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import RevealSection from '../common/RevealSection'
 
 function HomeAbout() {
@@ -63,7 +64,7 @@ function HomeAbout() {
                                     </div>
                                     <div>
                                         <p className="text-2xl font-display font-bold text-black-800">
-                                            15+
+                                            1+
                                         </p>
                                         <p className="text-sm text-text-secondary">
                                             Years of Excellence
@@ -90,7 +91,7 @@ function HomeAbout() {
                             </h2>
 
                             <p className="mt-6 text-lg text-text-secondary leading-relaxed">
-                                Founded in 2009,{" "}
+                                Founded in 2025,{" "}
                                 <strong className="text-black-800">Prestige Realty</strong> has
                                 grown to become one of the most trusted names in real estate.
                                 We combine deep market expertise with a client-first approach
@@ -135,8 +136,8 @@ function HomeAbout() {
                             </div>
 
                             <div className="mt-10 flex flex-wrap gap-4">
-                                <a
-                                    href="#services"
+                                <Link
+                                    to="/services"
                                     className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-gold text-black-900 font-bold rounded-xl shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 transition-all duration-300"
                                 >
                                     Our Services
@@ -153,13 +154,13 @@ function HomeAbout() {
                                             d="M17 8l4 4m0 0l-4 4m4-4H3"
                                         />
                                     </svg>
-                                </a>
-                                <a
-                                    href="#contact"
+                                </Link>
+                                <Link
+                                    to="/contact"
                                     className="inline-flex items-center gap-2 px-7 py-3.5 bg-ivory-200 text-text-secondary font-semibold rounded-xl hover:bg-ivory-300 transition-all duration-200"
                                 >
                                     Contact Us
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </RevealSection>

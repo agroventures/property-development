@@ -51,7 +51,7 @@ const PropertyCard = ({ property }) => {
           {property.description}
         </p>
 
-        <button onClick={() => navigate(`/properties/${property.slug}`)} className="flex items-center gap-2 text-gold-600 font-bold text-sm uppercase tracking-widest group/btn border-b border-transparent hover:border-gold-500 transition-all pb-1">
+        <button onClick={() => navigate(`/properties/${property.slug}`)} className="flex items-center gap-2 text-gold-600 font-bold text-sm uppercase tracking-widest group/btn border-b border-transparent hover:border-gold-500 transition-all pb-1 cursor-pointer">
           Explore Detail
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
         </button>
