@@ -49,7 +49,7 @@ const Footer = () => {
                 Featured Projects
               </h4>
               <ul className="space-y-3">
-                {properties.map((link, index) => (
+                {properties.slice(0, 3).map((link, index) => (
                   <li key={index}>
                     <a
                       href={`/properties/${link.slug}`}
