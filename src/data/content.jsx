@@ -125,7 +125,7 @@ export const contactInfo = [
     {
         icon: Mail,
         title: 'Email',
-        details: ['info@avproperty.lk.com'],
+        details: ['info@avproperty.lk'],
         color: 'bg-green-50 text-green-600'
     },
     {
