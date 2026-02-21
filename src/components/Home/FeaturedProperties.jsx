@@ -36,7 +36,7 @@ const FeaturedProperties = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] justify-items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8">
           {properties.map((property, index) => (
             <PropertyCard key={index} property={property} />
           ))}
