@@ -1,6 +1,9 @@
 import { ArrowRight, Mail, MapPin, MessageCircleMore, Phone } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 const ServicesCTA = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -28,11 +31,11 @@ const ServicesCTA = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group bg-gradient-gold text-black-900 px-10 py-4 rounded-full font-semibold text-lg hover:shadow-gold-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+              <button onClick={() => navigate('/contact')} className="group bg-gradient-gold text-black-900 px-10 py-4 rounded-full font-semibold text-lg hover:shadow-gold-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
                 Schedule a Consultation
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border-2 border-gold-500/50 text-gold-400 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gold-500/10 transition-all duration-300">
+              <button onClick={() => navigate('/properties')} className="border-2 border-gold-500/50 text-gold-400 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gold-500/10 transition-all duration-300">
                 View Our Projects
               </button>
             </div>
@@ -41,7 +44,7 @@ const ServicesCTA = () => {
             <div className="flex flex-wrap justify-center gap-8 mt-12 pt-8 border-t border-gold-500/20">
               <div className="flex items-center gap-3 text-ivory-400">
                 <Phone className="w-5 h-5 text-gold-500" />
-                <span>+94 11 234 5678</span>
+                <span>+94 77 064 7916</span>
               </div>
               <div className="flex items-center gap-3 text-ivory-400">
                 <Mail className="w-5 h-5 text-gold-500" />
