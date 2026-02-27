@@ -52,11 +52,13 @@ export const properties = [
         tag: 'Land Development',
         status: 'Ongoing',
         images: [
-            { id: 1, src: "/images/property/athurugiriya/1.png", title: "Athurugiriya-1" },
+            { id: 1, src: "/images/property/athurugiriya/1.jpeg", title: "Athurugiriya-1" },
             { id: 2, src: "/images/property/athurugiriya/2.jpeg", title: "Athurugiriya-2" },
             { id: 3, src: "/images/property/athurugiriya/3.jpeg", title: "Athurugiriya-3" },
             { id: 4, src: "/images/property/athurugiriya/4.jpeg", title: "Athurugiriya-4" },
             { id: 5, src: "/images/property/athurugiriya/5.jpeg", title: "Athurugiriya-5" },
+            { id: 6, src: "/images/property/athurugiriya/6.jpeg", title: "Athurugiriya-6" },
+            { id: 7, src: "/images/property/athurugiriya/7.jpeg", title: "Athurugiriya-7" },
         ],
     },
 
