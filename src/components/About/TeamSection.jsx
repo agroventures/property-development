@@ -88,7 +88,14 @@ const TeamSection = () => {
         </div> */}
 
         <div className="mb-24 bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-3/5 p-8 md:p-12 lg:p-16">
+          <div className="w-full md:w-2/5 md:order-2">
+            <img
+              src="/images/team/prabhath.jpg"
+              alt="Prabhath Gamage"
+              className="h-full object-cover"
+            />
+          </div>
+          <div className="w-full md:w-3/5 p-8 md:p-12 lg:p-16 md:order-1">
             <div className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
               A Message from our GM
             </div>
@@ -99,13 +106,6 @@ const TeamSection = () => {
               <h4 className="text-xl font-bold text-primary-950">Prabhath Gamage</h4>
               <p className="text-primary-600 font-medium">General Manager</p>
             </div>
-          </div>
-          <div className="w-full md:w-2/5">
-            <img
-              src="/images/team/prabhath.jpg"
-              alt="Prabhath Gamage"
-              className="h-full object-cover"
-            />
           </div>
         </div>
       </div>
