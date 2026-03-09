@@ -87,24 +87,56 @@ const TeamSection = () => {
           ))}
         </div> */}
 
-        <div className="mb-24 bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-2/5 md:order-2">
-            <img
-              src="/images/team/prabhath.jpg"
-              alt="Prabhath Gamage"
-              className="h-full object-cover"
-            />
-          </div>
-          <div className="w-full md:w-3/5 p-8 md:p-12 lg:p-16 md:order-1">
-            <div className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-              A Message from our GM
+        <div className="flex flex-col lg:flex-row gap-8 items-stretch px-4">
+          {/* COO Section */}
+          <div className="w-full lg:w-1/2 flex">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col w-full">
+              <div className="w-full">
+                <img
+                  src="/images/team/heshan.jpg"
+                  alt="Heshan Nanayakkara"
+                  className="h-72 md:h-96 w-full object-cover"
+                />
+              </div>
+              <div className="w-full bg-[#333336] text-white p-8 md:p-10 flex flex-col justify-center grow">
+                <div className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-semibold mb-6 self-start">
+                  A Message from our COO
+                </div>
+                <blockquote className="text-md md:text-lg font-serif italic text-gray-300 mb-8 leading-relaxed">
+                  “At Agroventures, our mission is to redefine land investment through operational excellence and unwavering integrity. We ensure every project reflects our commitment to sustainable growth.”
+                </blockquote>
+                <div>
+                  <h4 className="text-xl font-bold text-white">Heshan Nanayakkara</h4>
+                  <p className="text-primary-400 font-medium">Chief Operating Officer</p>
+                </div>
+              </div>
             </div>
-            <blockquote className="text-md md:text-lg font-serif italic text-primary-950 mb-8 leading-relaxed">
-              “With over three decades of experience across the Real Estate, Finance, and Banking sectors, I am proud to lead a team dedicated to excellence, transparency, and value creation. I have 30 years of experience. through leading institutions including Finance and Guarantee, Seylan Merchant Bank, Ceylinco Prosperity, Merchant Bank of Sri Lanka, Araliya Lands, Assetline Holdings, and WAS Group has instilled in me a deep understanding of what makes a property investment truly secure and profitable.At Agroventures, my priority is simple: to ensure that every project we undertake is delivered on time, within regulatory standards, and to the highest quality. We believe that true value lies in the details. From land selection to the final finishing touches, I personally oversee our end-to-end site management to ensure sustainable design and superior construction.For our buyers, this translates to confidence. We manage risks meticulously and operate with total transparency, ensuring smooth handovers and fewer post-purchase issues. We are building properties that offer not just immediate satisfaction, but long-term investment security.I remain fully accountable to our stakeholders and Board of Directors, ensuring that we maintain profitability without compromising the integrity that our clients rely on. ”
-            </blockquote>
-            <div>
-              <h4 className="text-xl font-bold text-primary-950">Prabhath Gamage</h4>
-              <p className="text-primary-600 font-medium">General Manager</p>
+          </div>
+
+          {/* GM Section */}
+          <div className="w-full lg:w-1/2 flex">
+            <div className="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col w-full">
+              {/* Image on Top */}
+              <div className="w-full">
+                <img
+                  src="/images/team/prabhath.jpg"
+                  alt="Prabhath Gamage"
+                  className="h-72 md:h-96 w-full object-cover"
+                />
+              </div>
+              {/* Content on Bottom */}
+              <div className="w-full bg-[#333336] text-white p-8 md:p-10 flex flex-col justify-center grow">
+                <div className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-semibold mb-6 self-start">
+                  A Message from our GM
+                </div>
+                <blockquote className="text-sm md:text-base font-serif italic text-gray-300 mb-8 leading-relaxed">
+                  "With over three decades of experience across the Real Estate, Finance, and Banking sectors, I am proud to lead a team dedicated to excellence, transparency, and value creation. I have 30 years of experience. through leading institutions including Finance and Guarantee, Seylan Merchant Bank, Ceylinco Prosperity, Merchant Bank of Sri Lanka, Araliya Lands, Assetline Holdings, and WAS Group has instilled in me a deep understanding of what makes a property investment truly secure and profitable.At Agroventures, my priority is simple: to ensure that every project we undertake is delivered on time, within regulatory standards, and to the highest quality. We believe that true value lies in the details. From land selection to the final finishing touches, I personally oversee our end-to-end site management to ensure sustainable design and superior construction.For our buyers, this translates to confidence. We manage risks meticulously and operate with total transparency, ensuring smooth handovers and fewer post-purchase issues. We are building properties that offer not just immediate satisfaction, but long-term investment security.I remain fully accountable to our stakeholders and Board of Directors, ensuring that we maintain profitability without compromising the integrity that our clients rely on. "
+                </blockquote>
+                <div>
+                  <h4 className="text-xl font-bold text-white">Prabhath Gamage</h4>
+                  <p className="text-primary-400 font-medium">General Manager</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
