@@ -93,7 +93,7 @@ const TeamSection = () => {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col w-full">
               <div className="w-full">
                 <img
-                  src="/images/team/heshan.jpg"
+                  src="/images/team/heshan.png"
                   alt="Heshan Nanayakkara"
                   className="h-72 md:h-96 w-full object-cover"
                 />
