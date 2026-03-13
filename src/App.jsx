@@ -13,6 +13,7 @@ import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import PropertyDetails from './pages/PropertyDetails'
 import { Toaster } from 'react-hot-toast'
+import Events from './pages/Events'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -42,6 +43,7 @@ function App() {
           <Route path='/properties' element={<Properties />} />
           <Route path='/properties/:slug' element={<PropertyDetails />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/events' element={<Events />} />
           <Route path='/terms' element={<TermsOfService />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />

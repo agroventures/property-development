@@ -2,11 +2,11 @@ import { Building2, BusFront, Droplets, Layout, MapPin, ShoppingBag, Zap } from 
 
 export const properties = [
     {
-        title: 'Eden Grove Athurugiriya',
-        slug: 'eden-grove-athurugiriya',
-        logo: "/images/property/athurugiriya/athurugiriya.png",
+        title: 'Eden Grove Malabe',
+        slug: 'eden-grove-malabe',
+        logo: "/images/property/athurugiriya/malabe.png",
         phone: "0770647916",
-        location: 'Athurugiriya',
+        location: 'Malabe',
         type: 'Residential',
         description: [
             "Located just 3.4km from Malabe Town",
