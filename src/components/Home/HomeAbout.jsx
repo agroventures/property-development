@@ -13,14 +13,14 @@ function HomeAbout() {
                                 <div className="space-y-4">
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=500&fit=crop"
+                                            src="/images/about/1.jpeg"
                                             alt="Interior"
                                             className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop"
+                                            src="/images/about/2.jpeg"
                                             alt="Pool"
                                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
                                         />
@@ -29,14 +29,14 @@ function HomeAbout() {
                                 <div className="space-y-4 pt-8">
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                                            src="/images/about/3.webp"
                                             alt="Exterior"
                                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=500&fit=crop"
+                                            src="/images/about/4.webp"
                                             alt="Garden"
                                             className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                                         />
