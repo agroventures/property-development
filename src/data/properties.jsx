@@ -59,6 +59,9 @@ export const properties = [
             { id: 5, src: "/images/property/athurugiriya/5.jpeg", title: "Athurugiriya-5" },
             { id: 6, src: "/images/property/athurugiriya/6.jpeg", title: "Athurugiriya-6" },
             { id: 7, src: "/images/property/athurugiriya/7.jpeg", title: "Athurugiriya-7" },
+            { id: 7, src: "/images/property/athurugiriya/8.webp", title: "Athurugiriya-8" },
+            { id: 7, src: "/images/property/athurugiriya/9.webp", title: "Athurugiriya-9" },
+            { id: 7, src: "/images/property/athurugiriya/10.webp", title: "Athurugiriya-10" },
         ],
     },
 

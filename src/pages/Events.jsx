@@ -388,35 +388,6 @@ function EventSeparator() {
   );
 }
 
-// ─── Stats Bar ───────────────────────────────────────────────────────────────
-function StatsBar() {
-  const stats = [
-    { label: "Events Hosted", value: "50+" },
-    { label: "Exclusive Guests", value: "2,500+" },
-    { label: "Properties Showcased", value: "120+" },
-    { label: "Cities Worldwide", value: "18" },
-  ];
-
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-      {stats.map((stat, idx) => (
-        <div
-          key={idx}
-          className="text-center p-6 rounded-2xl bg-ivory-200/50 border border-border-muted/40
-                     hover:border-gold-500/30 transition-all duration-500"
-        >
-          <div className="font-display text-3xl md:text-4xl font-bold text-gradient mb-2">
-            {stat.value}
-          </div>
-          <div className="text-text-secondary text-sm tracking-wider uppercase">
-            {stat.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // ─── Main Events Page ────────────────────────────────────────────────────────
 export default function Events() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -442,7 +413,7 @@ export default function Events() {
       <Hero
         page="events"
         pageTitle="Events"
-        img="https://images.unsplash.com/photo-1729505305192-610539203144?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        img="https://images.unsplash.com/photo-1591389703635-e15a07b842d7?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2070&q=80"
         imgAlt="Events"
         badgeText="Our Legacy"
         title="Previous Events"

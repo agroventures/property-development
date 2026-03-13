@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const Hero = ({ page, pageTitle, img, imgAlt, badgeText, title, highlightedText, description }) => {
+const Hero = ({ page, pageTitle, video, img, imgAlt, badgeText, title, highlightedText, description }) => {
     const navigate = useNavigate();
     const [searchLocation, setSearchLocation] = useState('');
     const [searchType, setSearchType] = useState('all');
@@ -16,11 +16,24 @@ const Hero = ({ page, pageTitle, img, imgAlt, badgeText, title, highlightedText,
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
             {/* Background Layer */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={img}
-                    alt={imgAlt}
-                    className="w-full h-full object-cover scale-105 animate-scale-in"
-                />
+                {page !== 'home' && (
+                    <img
+                        src={img}
+                        alt={imgAlt}
+                        className="w-full h-full object-cover scale-105 animate-scale-in"
+                    />
+                )}
+
+                {page == 'home' && (
+                    <video
+                        src={video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    ></video>
+                )}
                 {/* Luxury Overlay: Darker gradient for better text readability */}
                 <div className="absolute inset-0 bg-linear-to-r from-black-900/60 via-black-900/50 to-black-900/40"></div>
             </div>
