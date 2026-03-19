@@ -17,11 +17,11 @@ const CoreValues = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {values.map((value, index) => (
             <div
               key={index}
-              className="group bg-white hover:bg-white/65 rounded-3xl p-8 transition-all duration-300 cursor-pointer"
+              className="group bg-white hover:bg-white/65 rounded-3xl p-8 transition-all duration-300 cursor-pointer w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               <div className="w-16 h-16 bg-white group-hover:bg-white/20 rounded-2xl flex items-center justify-center mb-6 text-primary-600 group-hover:text-gold-500 shadow-lg transition-all">
                 {value.icon}

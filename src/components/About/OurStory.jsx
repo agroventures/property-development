@@ -37,7 +37,7 @@ const OurStory = () => {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1453&q=80"
+                src="/images/about/4.webp"
                 alt="Luxury Property"
                 className="w-full h-150 object-cover"
               />

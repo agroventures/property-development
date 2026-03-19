@@ -24,7 +24,7 @@ const Header = () => {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
+                <div className="flex items-center justify-between h-30">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
                         <Link to='/'>
@@ -33,13 +33,13 @@ const Header = () => {
                                     <img
                                         src="/logo.png"
                                         alt="Logo"
-                                        className="h-12"
+                                        className="h-15"
                                     />
                                 ) : (
                                     <img
                                         src="/logo.png"
                                         alt="Logo"
-                                        className="h-12 brightness-0 invert"
+                                        className="h-15 brightness-0 invert"
                                     />
                                 )
                             }
@@ -53,7 +53,7 @@ const Header = () => {
                                 <Link
                                     key={item.id}
                                     to={item.url}
-                                    className={`text-sm ${isScrolled ? 'text-gold-950' : 'text-ivory-200'} hover:text-gold-500 transition-colors duration-300 tracking-wide`}
+                                    className={`text-md ${isScrolled ? 'text-gold-950' : 'text-ivory-200'} hover:text-gold-500 transition-colors duration-300 tracking-wide`}
                                 >
                                     {item.name}
                                 </Link>

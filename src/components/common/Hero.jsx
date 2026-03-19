@@ -61,7 +61,7 @@ const Hero = ({ page, pageTitle, video, img, imgAlt, badgeText, title, highlight
                     </div>
 
                     {/* Main Title */}
-                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-ivory-50 leading-[1.1] mb-8">
+                    <h1 className="text-5xl md:text-5xl lg:text-7xl font-display font-bold text-ivory-50 leading-[1.1] mb-8">
                         {title}
                         <span className="block mt-2 text-gradient">
                             {highlightedText}

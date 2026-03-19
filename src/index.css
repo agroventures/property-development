@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @theme {
   /* ===============================
@@ -54,8 +55,8 @@
   =============================== */
 
   /* --font-sans: "Inter", system-ui, sans-serif; */
-  --font-sans: "Roboto", sans-serif;
-  --font-display: "Roboto", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "DM Sans", sans-serif;
 
   /* ===============================
      ANIMATIONS
