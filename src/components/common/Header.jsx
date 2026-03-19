@@ -53,7 +53,7 @@ const Header = () => {
                                 <Link
                                     key={item.id}
                                     to={item.url}
-                                    className={`text-md ${isScrolled ? 'text-gold-950' : 'text-ivory-200'} hover:text-gold-500 transition-colors duration-300 tracking-wide`}
+                                    className={`text-lg ${isScrolled ? 'text-gold-950' : 'text-ivory-200'} hover:text-gold-500 transition-colors duration-300 tracking-wide`}
                                 >
                                     {item.name}
                                 </Link>
@@ -85,7 +85,7 @@ const Header = () => {
                                 <Link
                                     key={item.id}
                                     to={item.url}
-                                    className="block py-3 text-gold-500 hover:text-white transition-colors border-b border-gold-900/30 last:border-0"
+                                    className="block py-3 text-gold-500 font-sans hover:text-white transition-colors border-b border-gold-900/30 last:border-0"
                                 >
                                     {item.name}
                                 </Link>
