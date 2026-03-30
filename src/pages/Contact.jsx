@@ -4,6 +4,7 @@ import Footer from '../components/common/Footer'
 import ContactHero from '../components/Contact/ContactHero'
 import ContactSection from '../components/Contact/ContactSection'
 import ContactMap from '../components/Contact/ContactMap'
+import FAQs from '../components/Contact/FAQs'
 import useSEO from '../hooks/useSEO'
 
 function Contact() {
@@ -22,6 +23,7 @@ function Contact() {
       <ContactHero />
       <ContactSection />
       <ContactMap />
+      <FAQs />
       <Footer />
     </div>
   )
