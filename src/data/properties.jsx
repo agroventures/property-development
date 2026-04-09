@@ -48,7 +48,7 @@ export const properties = [
         map: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2436.8322010417724!2d79.98582877781323!3d6.912194573234641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2slk!4v1771568141588!5m2!1sen!2slk",
         roadMap: "",
         blockingOutPlan: "/images/property/athurugiriya/blocking-out-plan.jpeg",
-        view360: 'https://www.google.com/maps/embed?pb=!4v1771567558477!6m8!1m7!1snoz9yj0qbEVeW0SIOVi9nA!2m2!1d6.912269129222116!2d79.98560883667399!3f61.38239626011414!4f-10.406628709631676!5f0.7820865974627469',
+        view360: 'https://www.google.com/maps/embed?pb=!3m2!1sen!2slk!4v1775728977980!5m2!1sen!2slk!6m8!1m7!1sCAoSHENJQUJJaEQ5TTdmVXN4bGlRNW1NYi1wV0pmQ2Q.!2m2!1d6.912333698784096!2d79.98560550853166!3f66.16539864651048!4f-11.190321146794162!5f0.7820865974627469',
         tag: 'Land Development',
         status: 'Ongoing',
         images: [
