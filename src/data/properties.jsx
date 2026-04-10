@@ -45,7 +45,7 @@ export const properties = [
             "30% of the total land value should be paid as the initial payment.",
             "The remaining balance can be paid through a bank loan facility with an easy repayment plan of up to 25 years."
         ],
-        map: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2436.8322010417724!2d79.98582877781323!3d6.912194573234641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2slk!4v1771568141588!5m2!1sen!2slk",
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4873.661482246518!2d79.98319237581792!3d6.9124777185192485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25700562f2e8f%3A0x2a9bb893ce1456a9!2sEden%20Grove%20by%20Agroventures!5e1!3m2!1sen!2slk!4v1775813902356!5m2!1sen!2slk",
         roadMap: "",
         blockingOutPlan: "/images/property/athurugiriya/blocking-out-plan.jpeg",
         view360: 'https://www.google.com/maps/embed?pb=!3m2!1sen!2slk!4v1775728977980!5m2!1sen!2slk!6m8!1m7!1sCAoSHENJQUJJaEQ5TTdmVXN4bGlRNW1NYi1wV0pmQ2Q.!2m2!1d6.912333698784096!2d79.98560550853166!3f66.16539864651048!4f-11.190321146794162!5f0.7820865974627469',
