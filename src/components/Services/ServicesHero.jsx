@@ -8,7 +8,7 @@ export default function ServicesHero() {
             page="services"
             pageTitle="Services"
             // img="https://images.unsplash.com/photo-1764222233275-87dc016c11dc?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2070&q=80"
-            img="/images/hero/services.webp"
+            img="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/hero/services.webp"
             imgAlt="Real Estate Services"
             badgeText="What We Offer"
             title="Expertise that Shapes"

@@ -47,7 +47,7 @@ export const team = [
     {
         name: 'Prabhath Gamage',
         role: 'General Manager',
-        image: '/images/team/prabhath.jpg',
+        image: 'https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/team/prabhath.jpg',
         // bio: 'Former VP at Christie\'s Real Estate',
     },
     // {

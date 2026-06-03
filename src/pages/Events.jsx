@@ -413,7 +413,7 @@ export default function Events() {
       <Hero
         page="events"
         pageTitle="Events"
-        img="/images/hero/events.jpeg"
+        img="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/hero/events.jpeg"
         imgAlt="Events"
         badgeText="Our Legacy"
         title="Previous Events"

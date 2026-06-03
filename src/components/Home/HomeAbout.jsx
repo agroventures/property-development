@@ -13,14 +13,14 @@ function HomeAbout() {
                                 <div className="space-y-4">
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="/images/about/1.jpeg"
+                                            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/about/1.jpeg"
                                             alt="Interior"
                                             className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="/images/about/2.jpeg"
+                                            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/about/2.jpeg"
                                             alt="Pool"
                                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
                                         />
@@ -29,14 +29,14 @@ function HomeAbout() {
                                 <div className="space-y-4 pt-8">
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="/images/about/3.webp"
+                                            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/about/3.webp"
                                             alt="Exterior"
                                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                     <div className="rounded-3xl overflow-hidden shadow-gold border border-border-muted/40">
                                         <img
-                                            src="/images/about/4.webp"
+                                            src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/about/4.webp"
                                             alt="Garden"
                                             className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
                                         />

@@ -8,7 +8,7 @@ const HomeHero = () => {
       // img="https://images.unsplash.com/photo-1565402170291-8491f14678db?q=80&w=1117&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1920&h=1080&fit=crop"
       // img="/images/hero/landing.png"
       // imgAlt="Luxury home"
-      video="/images/hero/landing.mp4"
+      video="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-property/hero/landing.mp4"
       badgeText="Welcome to AV Properties"
       title="Discover Your"
       highlightedText="Dream Home"
