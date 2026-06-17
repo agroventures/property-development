@@ -35,7 +35,7 @@ const Hero = ({ page, pageTitle, video, img, imgAlt, badgeText, title, highlight
                     ></video>
                 )}
                 {/* Luxury Overlay: Darker gradient for better text readability */}
-                <div className="absolute inset-0 bg-linear-to-r from-black-900/60 via-black-900/50 to-black-900/40"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-black-900/30 via-black-900/20 to-black-900/10"></div>
             </div>
 
             {/* Content Layer */}

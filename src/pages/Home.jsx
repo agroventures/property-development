@@ -14,12 +14,12 @@ import useSEO from '../hooks/useSEO'
 
 function Home() {
   const url = window.location.href;
-  // const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setShowPopup(true), 500);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => { if (e.key === 'Escape') setShowPopup(false); };
@@ -38,19 +38,35 @@ function Home() {
     <div className="min-h-screen">
 
       {/* Popup */}
-      {/* {showPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black-900/70 backdrop-blur-sm animate-fade-in" onClick={() => setShowPopup(false)}>
-          <div className="relative max-w-lg w-full mx-4 rounded-3xl overflow-hidden shadow-gold-lg" onClick={(e) => e.stopPropagation()}>
+      {showPopup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-fade-in"
+          onClick={() => setShowPopup(false)}
+        >
+          <div
+            className="relative max-w-md md:max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl bg-zinc-900 flex flex-col max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute top-4 right-4 z-10 p-2 bg-black-900/50 hover:bg-gold-500 text-white rounded-full transition-all duration-300"
+              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-amber-500 text-white rounded-full transition-all duration-300"
+              aria-label="Close popup"
             >
               <X size={20} />
             </button>
-            <img src="/images/popup.jpeg" alt="Promotion" className="w-full h-auto" />
+
+            {/* Image Container */}
+            <div className="w-full h-full overflow-y-auto pointer-events-auto">
+              <img
+                src="/images/popup.jpeg"
+                alt="Promotion"
+                className="w-full h-auto object-contain max-h-[80vh] mx-auto"
+              />
+            </div>
           </div>
         </div>
-      )} */}
+      )}
       <Header />
       <HomeHero />
       <HomeAbout />
