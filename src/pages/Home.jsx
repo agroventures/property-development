@@ -14,12 +14,12 @@ import useSEO from '../hooks/useSEO'
 
 function Home() {
   const url = window.location.href;
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setShowPopup(true), 500);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => { if (e.key === 'Escape') setShowPopup(false); };
@@ -38,7 +38,7 @@ function Home() {
     <div className="min-h-screen">
 
       {/* Popup */}
-      {showPopup && (
+      {/* {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black-900/70 backdrop-blur-sm animate-fade-in" onClick={() => setShowPopup(false)}>
           <div className="relative max-w-lg w-full mx-4 rounded-3xl overflow-hidden shadow-gold-lg" onClick={(e) => e.stopPropagation()}>
             <button
@@ -50,7 +50,7 @@ function Home() {
             <img src="/images/popup.jpeg" alt="Promotion" className="w-full h-auto" />
           </div>
         </div>
-      )}
+      )} */}
       <Header />
       <HomeHero />
       <HomeAbout />
